@@ -1,0 +1,2 @@
+Es importante saber que el ESQUEMA por estandar se utiliza
+la extension ".avsc", pero tambien podria tener extension ".txt".
