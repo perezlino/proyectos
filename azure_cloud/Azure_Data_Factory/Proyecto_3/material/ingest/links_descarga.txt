@@ -1,0 +1,18 @@
+LINKS
+=====
+
+ECDC Website for Covid-19 Data 
+------------------------------
+https://www.ecdc.europa.eu/en/covid-19/data
+
+
+Eurostat Website for Population Data
+------------------------------------
+https://ec.europa.eu/eurostat/estat-navtree-portlet-prod/BulkDownloadListing?file=data/tps00010.tsv.gz
+
+
+Github
+------
+https://github.com/cloudboxacademy/covid19
+https://github.com/cloudboxacademy/covid19/raw/main/ecdc_data/hospital_admissions.csv
+https://github.com/cloudboxacademy/covid19/raw/main/ecdc_data/cases_deaths.csv
