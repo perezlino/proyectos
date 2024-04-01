@@ -1,0 +1,12 @@
+Varios JSON para trabajar
+-------------------------
+
+https://microsoftedge.github.io/Demos/json-dummy-data/
+
+
+Para visualizar de mejor manera un JSON
+----------------------------------------
+
+http://jsonviewer.stack.hu/
+
+https://jsoneditoronline.org/
