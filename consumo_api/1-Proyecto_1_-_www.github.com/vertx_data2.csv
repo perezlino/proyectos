@@ -1,0 +1,4 @@
+segments.duration,segments.que_offset,segments.ref_offset,source_uid,media_type,source_path,status,matches.uid,matches.artist,matches.album,matches.title,matches.type,matches.imdb_id,matches.year
+24.9375,0.0,18.0,1758730481226206085,audio,sample.mp4,succeeded,6475547275973858650,Black Eyed Peas; Papa Roach,Elephunk,Anxiety,music,,
+24.9375,0.0,3500.625,1758730481226206085,audio,sample.mp4,succeeded,1566530810344932800,,,You Got Served,movie,365957,2004
+21.0,0.0,8608.5,1758730481226206085,video,sample.mp4,succeeded,1342729426672482861,,,Troy,movie,332452,2004
