@@ -1,0 +1,749 @@
+fecha,equipo_local,resultado,equipo_visita
+13-08-2023,Albacete,1 - 1,Espanol
+20-08-2023,Albacete,2 - 2,Amorebieta
+27-08-2023,Leganes,2 - 0,Albacete
+01-09-2023,Albacete,2 - 0,Valladolid
+09-09-2023,Tenerife,2 - 0,Albacete
+16-09-2023,Albacete,2 - 1,Burgos
+23-09-2023,Santander,2 - 1,Albacete
+30-09-2023,Albacete,3 - 1,FC Andorra
+03-10-2023,Alcorcon,1 - 2,Albacete
+06-10-2023,Albacete,0 - 2,Levante
+13-10-2023,Oviedo,3 - 0,Albacete
+22-10-2023,Albacete,1 - 3,Sp Gijon
+29-10-2023,Huesca,0 - 0,Albacete
+04-11-2023,Albacete,1 - 1,Elche
+12-11-2023,Eibar,1 - 1,Albacete
+19-11-2023,Cartagena,1 - 1,Albacete
+25-11-2023,Albacete,1 - 0,Zaragoza
+03-12-2023,Racing Ferrol,5 - 4,Albacete
+08-12-2023,Albacete,2 - 0,Villarreal II
+16-12-2023,Mirandes,2 - 0,Albacete
+19-12-2023,Albacete,1 - 1,Eldense
+13-01-2024,Levante,3 - 2,Albacete
+20-01-2024,Albacete,0 - 1,Alcorcon
+28-01-2024,Burgos,2 - 1,Albacete
+03-02-2024,Albacete,1 - 1,Cartagena
+12-02-2024,Valladolid,0 - 0,Albacete
+18-02-2024,Albacete,2 - 0,Santander
+25-02-2024,Amorebieta,1 - 1,Albacete
+01-03-2024,Sp Gijon,2 - 1,Albacete
+09-03-2024,Albacete,1 - 2,Oviedo
+17-03-2024,Elche,3 - 2,Albacete
+25-03-2024,Albacete,1 - 1,Racing Ferrol
+30-03-2024,Albacete,1 - 1,Huesca
+07-04-2024,Espanol,? - ?,Albacete
+14-08-2023,Mirandes,4 - 0,Alcorcon
+19-08-2023,Alcorcon,0 - 2,Leganes
+26-08-2023,Valladolid,0 - 2,Alcorcon
+01-09-2023,Alcorcon,1 - 1,Racing Ferrol
+11-09-2023,Eldense,2 - 2,Alcorcon
+16-09-2023,Alcorcon,0 - 2,Levante
+23-09-2023,Alcorcon,0 - 2,Huesca
+30-09-2023,Villarreal II,2 - 2,Alcorcon
+03-10-2023,Alcorcon,1 - 2,Albacete
+08-10-2023,Zaragoza,0 - 2,Alcorcon
+15-10-2023,FC Andorra,2 - 0,Alcorcon
+23-10-2023,Alcorcon,1 - 1,Cartagena
+29-10-2023,Oviedo,2 - 0,Alcorcon
+05-11-2023,Alcorcon,3 - 1,Santander
+12-11-2023,Burgos,4 - 2,Alcorcon
+18-11-2023,Alcorcon,0 - 0,Sp Gijon
+26-11-2023,Espanol,2 - 0,Alcorcon
+03-12-2023,Alcorcon,0 - 2,Elche
+11-12-2023,Tenerife,1 - 0,Alcorcon
+17-12-2023,Alcorcon,1 - 0,Eibar
+21-12-2023,Amorebieta,1 - 2,Alcorcon
+13-01-2024,Alcorcon,0 - 0,Mirandes
+20-01-2024,Albacete,0 - 1,Alcorcon
+27-01-2024,Alcorcon,0 - 0,Zaragoza
+03-02-2024,Huesca,1 - 0,Alcorcon
+11-02-2024,Alcorcon,1 - 0,FC Andorra
+18-02-2024,Leganes,3 - 0,Alcorcon
+25-02-2024,Alcorcon,1 - 1,Tenerife
+04-03-2024,Elche,3 - 0,Alcorcon
+10-03-2024,Alcorcon,1 - 1,Espanol
+16-03-2024,Sp Gijon,1 - 0,Alcorcon
+23-03-2024,Alcorcon,1 - 0,Oviedo
+31-03-2024,Alcorcon,1 - 1,Amorebieta
+08-04-2024,Santander,? - ?,Alcorcon
+11-08-2023,Amorebieta,1 - 1,Levante
+20-08-2023,Albacete,2 - 2,Amorebieta
+27-08-2023,Amorebieta,3 - 0,FC Andorra
+03-09-2023,Espanol,3 - 2,Amorebieta
+10-09-2023,Santander,1 - 0,Amorebieta
+17-09-2023,Amorebieta,2 - 0,Mirandes
+24-09-2023,Villarreal II,3 - 1,Amorebieta
+01-10-2023,Amorebieta,0 - 0,Cartagena
+05-10-2023,Racing Ferrol,1 - 0,Amorebieta
+08-10-2023,Amorebieta,1 - 2,Eibar
+15-10-2023,Leganes,6 - 0,Amorebieta
+21-10-2023,Amorebieta,0 - 0,Oviedo
+28-10-2023,Eldense,2 - 0,Amorebieta
+05-11-2023,Amorebieta,0 - 1,Huesca
+11-11-2023,Sp Gijon,1 - 1,Amorebieta
+18-11-2023,Amorebieta,2 - 0,Tenerife
+26-11-2023,Elche,2 - 0,Amorebieta
+03-12-2023,Amorebieta,0 - 1,Burgos
+09-12-2023,Valladolid,2 - 1,Amorebieta
+17-12-2023,Amorebieta,1 - 1,Zaragoza
+21-12-2023,Amorebieta,1 - 2,Alcorcon
+13-01-2024,Oviedo,1 - 1,Amorebieta
+20-01-2024,Amorebieta,0 - 2,Eldense
+27-01-2024,Cartagena,1 - 0,Amorebieta
+04-02-2024,Amorebieta,0 - 1,Santander
+10-02-2024,Amorebieta,1 - 0,Elche
+18-02-2024,Huesca,0 - 0,Amorebieta
+25-02-2024,Amorebieta,1 - 1,Albacete
+03-03-2024,Zaragoza,0 - 1,Amorebieta
+11-03-2024,Amorebieta,0 - 1,Leganes
+18-03-2024,FC Andorra,0 - 1,Amorebieta
+24-03-2024,Amorebieta,3 - 1,Sp Gijon
+31-03-2024,Alcorcon,1 - 1,Amorebieta
+05-04-2024,Amorebieta,? - ?,Racing Ferrol
+13-08-2023,Burgos,1 - 1,Huesca
+19-08-2023,Levante,3 - 2,Burgos
+26-08-2023,Burgos,1 - 0,Oviedo
+02-09-2023,Sp Gijon,2 - 1,Burgos
+09-09-2023,Burgos,1 - 0,Eibar
+16-09-2023,Albacete,2 - 1,Burgos
+23-09-2023,Burgos,4 - 0,Elche
+01-10-2023,Valladolid,3 - 0,Burgos
+04-10-2023,Burgos,1 - 0,Leganes
+08-10-2023,Tenerife,2 - 1,Burgos
+15-10-2023,Burgos,3 - 2,Villarreal II
+22-10-2023,Santander,3 - 0,Burgos
+30-10-2023,Burgos,1 - 1,Zaragoza
+05-11-2023,Eldense,2 - 0,Burgos
+12-11-2023,Burgos,4 - 2,Alcorcon
+19-11-2023,Racing Ferrol,1 - 1,Burgos
+25-11-2023,Burgos,0 - 0,FC Andorra
+03-12-2023,Amorebieta,0 - 1,Burgos
+09-12-2023,Burgos,0 - 0,Mirandes
+16-12-2023,Cartagena,0 - 3,Burgos
+19-12-2023,Espanol,3 - 3,Burgos
+13-01-2024,Burgos,1 - 0,Valladolid
+22-01-2024,Leganes,2 - 0,Burgos
+28-01-2024,Burgos,2 - 1,Albacete
+02-02-2024,Elche,2 - 0,Burgos
+11-02-2024,Burgos,2 - 0,Racing Ferrol
+17-02-2024,Oviedo,5 - 0,Burgos
+25-02-2024,Burgos,1 - 0,Sp Gijon
+02-03-2024,Burgos,3 - 0,Cartagena
+10-03-2024,Eibar,0 - 1,Burgos
+16-03-2024,Burgos,1 - 1,Levante
+24-03-2024,Huesca,3 - 0,Burgos
+29-03-2024,Burgos,0 - 0,Espanol
+07-04-2024,Villarreal II,? - ?,Burgos
+13-08-2023,Cartagena,0 - 1,Eldense
+18-08-2023,FC Andorra,3 - 2,Cartagena
+25-08-2023,Cartagena,0 - 1,Levante
+02-09-2023,Villarreal II,1 - 2,Cartagena
+10-09-2023,Cartagena,1 - 3,Zaragoza
+16-09-2023,Valladolid,1 - 0,Cartagena
+22-09-2023,Cartagena,1 - 2,Eibar
+01-10-2023,Amorebieta,0 - 0,Cartagena
+05-10-2023,Cartagena,0 - 2,Espanol
+08-10-2023,Racing Ferrol,1 - 1,Cartagena
+14-10-2023,Cartagena,2 - 3,Santander
+23-10-2023,Alcorcon,1 - 1,Cartagena
+29-10-2023,Mirandes,2 - 1,Cartagena
+05-11-2023,Cartagena,0 - 3,Leganes
+13-11-2023,Oviedo,1 - 1,Cartagena
+19-11-2023,Cartagena,1 - 1,Albacete
+26-11-2023,Tenerife,1 - 1,Cartagena
+02-12-2023,Cartagena,1 - 0,Sp Gijon
+10-12-2023,Elche,1 - 2,Cartagena
+16-12-2023,Cartagena,0 - 3,Burgos
+21-12-2023,Huesca,3 - 0,Cartagena
+14-01-2024,Cartagena,4 - 1,Villarreal II
+21-01-2024,Santander,0 - 2,Cartagena
+27-01-2024,Cartagena,1 - 0,Amorebieta
+03-02-2024,Albacete,1 - 1,Cartagena
+11-02-2024,Cartagena,1 - 0,Mirandes
+16-02-2024,Zaragoza,1 - 2,Cartagena
+25-02-2024,Cartagena,0 - 1,Elche
+02-03-2024,Burgos,3 - 0,Cartagena
+09-03-2024,Cartagena,2 - 1,Racing Ferrol
+15-03-2024,Eldense,0 - 0,Cartagena
+23-03-2024,Cartagena,1 - 0,FC Andorra
+30-03-2024,Leganes,0 - 0,Cartagena
+07-04-2024,Cartagena,? - ?,Valladolid
+12-08-2023,Santander,4 - 0,Eibar
+19-08-2023,Eibar,2 - 1,Elche
+28-08-2023,Eldense,2 - 1,Eibar
+03-09-2023,Eibar,0 - 1,Leganes
+09-09-2023,Burgos,1 - 0,Eibar
+17-09-2023,Eibar,2 - 0,Racing Ferrol
+22-09-2023,Cartagena,1 - 2,Eibar
+30-09-2023,Eibar,3 - 0,Tenerife
+05-10-2023,Mirandes,1 - 3,Eibar
+08-10-2023,Amorebieta,1 - 2,Eibar
+15-10-2023,Eibar,1 - 1,Huesca
+21-10-2023,Zaragoza,2 - 3,Eibar
+27-10-2023,Eibar,5 - 1,Valladolid
+03-11-2023,Espanol,2 - 2,Eibar
+12-11-2023,Eibar,1 - 1,Albacete
+19-11-2023,Oviedo,2 - 1,Eibar
+25-11-2023,Eibar,3 - 1,Levante
+04-12-2023,Villarreal II,1 - 0,Eibar
+10-12-2023,Eibar,2 - 2,FC Andorra
+17-12-2023,Alcorcon,1 - 0,Eibar
+20-12-2023,Eibar,1 - 1,Sp Gijon
+12-01-2024,Eibar,2 - 0,Santander
+21-01-2024,Huesca,2 - 3,Eibar
+26-01-2024,Eibar,1 - 0,Mirandes
+04-02-2024,Racing Ferrol,1 - 1,Eibar
+11-02-2024,Eibar,1 - 0,Zaragoza
+18-02-2024,Elche,0 - 0,Eibar
+24-02-2024,Eibar,2 - 3,Espanol
+03-03-2024,Leganes,0 - 2,Eibar
+10-03-2024,Eibar,0 - 1,Burgos
+16-03-2024,Eibar,2 - 0,Villarreal II
+24-03-2024,Valladolid,3 - 1,Eibar
+30-03-2024,Eibar,5 - 1,Eldense
+07-04-2024,Tenerife,? - ?,Eibar
+12-08-2023,Elche,0 - 1,Racing Ferrol
+19-08-2023,Eibar,2 - 1,Elche
+26-08-2023,Elche,1 - 0,Villarreal II
+02-09-2023,Elche,1 - 1,Santander
+10-09-2023,Valladolid,1 - 1,Elche
+17-09-2023,Elche,1 - 0,Leganes
+23-09-2023,Burgos,4 - 0,Elche
+30-09-2023,Elche,0 - 0,Levante
+04-10-2023,Sp Gijon,2 - 0,Elche
+09-10-2023,Elche,2 - 1,FC Andorra
+15-10-2023,Eldense,1 - 1,Elche
+22-10-2023,Huesca,0 - 1,Elche
+28-10-2023,Elche,2 - 1,Tenerife
+04-11-2023,Albacete,1 - 1,Elche
+11-11-2023,Elche,2 - 0,Zaragoza
+18-11-2023,Espanol,2 - 0,Elche
+26-11-2023,Elche,2 - 0,Amorebieta
+03-12-2023,Alcorcon,0 - 2,Elche
+10-12-2023,Elche,1 - 2,Cartagena
+15-12-2023,Oviedo,3 - 2,Elche
+19-12-2023,Elche,0 - 0,Mirandes
+13-01-2024,Tenerife,0 - 1,Elche
+21-01-2024,Elche,0 - 0,Valladolid
+28-01-2024,FC Andorra,0 - 1,Elche
+02-02-2024,Elche,2 - 0,Burgos
+10-02-2024,Amorebieta,1 - 0,Elche
+18-02-2024,Elche,0 - 0,Eibar
+25-02-2024,Cartagena,0 - 1,Elche
+04-03-2024,Elche,3 - 0,Alcorcon
+10-03-2024,Villarreal II,0 - 1,Elche
+17-03-2024,Elche,3 - 2,Albacete
+24-03-2024,Levante,3 - 2,Elche
+31-03-2024,Racing Ferrol,1 - 0,Elche
+05-04-2024,Elche,? - ?,Oviedo
+13-08-2023,Cartagena,0 - 1,Eldense
+21-08-2023,Villarreal II,3 - 1,Eldense
+28-08-2023,Eldense,2 - 1,Eibar
+03-09-2023,Zaragoza,2 - 0,Eldense
+11-09-2023,Eldense,2 - 2,Alcorcon
+17-09-2023,Espanol,3 - 3,Eldense
+23-09-2023,Levante,2 - 0,Eldense
+01-10-2023,Eldense,1 - 3,Oviedo
+04-10-2023,Eldense,0 - 1,Valladolid
+07-10-2023,Huesca,0 - 1,Eldense
+15-10-2023,Eldense,1 - 1,Elche
+22-10-2023,Racing Ferrol,1 - 1,Eldense
+28-10-2023,Eldense,2 - 0,Amorebieta
+05-11-2023,Eldense,2 - 0,Burgos
+12-11-2023,FC Andorra,1 - 3,Eldense
+19-11-2023,Eldense,2 - 2,Mirandes
+27-11-2023,Sp Gijon,2 - 0,Eldense
+02-12-2023,Eldense,0 - 3,Tenerife
+10-12-2023,Leganes,1 - 1,Eldense
+16-12-2023,Eldense,3 - 3,Santander
+19-12-2023,Albacete,1 - 1,Eldense
+15-01-2024,Eldense,1 - 1,Zaragoza
+20-01-2024,Amorebieta,0 - 2,Eldense
+28-01-2024,Eldense,3 - 2,Espanol
+04-02-2024,Oviedo,1 - 1,Eldense
+10-02-2024,Eldense,0 - 0,Huesca
+19-02-2024,Tenerife,1 - 0,Eldense
+25-02-2024,Eldense,2 - 0,Racing Ferrol
+02-03-2024,Eldense,2 - 0,Villarreal II
+09-03-2024,Mirandes,3 - 1,Eldense
+15-03-2024,Eldense,0 - 0,Cartagena
+24-03-2024,Santander,2 - 1,Eldense
+30-03-2024,Eibar,5 - 1,Eldense
+06-04-2024,Eldense,? - ?,FC Andorra
+13-08-2023,Albacete,1 - 1,Espanol
+19-08-2023,Espanol,2 - 0,Santander
+27-08-2023,Mirandes,0 - 1,Espanol
+03-09-2023,Espanol,3 - 2,Amorebieta
+08-09-2023,Levante,1 - 4,Espanol
+17-09-2023,Espanol,3 - 3,Eldense
+25-09-2023,Tenerife,1 - 0,Espanol
+02-10-2023,Espanol,3 - 0,Racing Ferrol
+05-10-2023,Cartagena,0 - 2,Espanol
+09-10-2023,Villarreal II,3 - 1,Espanol
+14-10-2023,Espanol,2 - 0,Valladolid
+20-10-2023,Espanol,0 - 1,Leganes
+28-10-2023,Sp Gijon,2 - 0,Espanol
+03-11-2023,Espanol,2 - 2,Eibar
+12-11-2023,Huesca,1 - 1,Espanol
+18-11-2023,Espanol,2 - 0,Elche
+26-11-2023,Espanol,2 - 0,Alcorcon
+01-12-2023,Oviedo,2 - 0,Espanol
+08-12-2023,Espanol,1 - 1,Zaragoza
+16-12-2023,FC Andorra,1 - 1,Espanol
+19-12-2023,Espanol,3 - 3,Burgos
+13-01-2024,Racing Ferrol,0 - 0,Espanol
+20-01-2024,Espanol,2 - 1,Villarreal II
+28-01-2024,Eldense,3 - 2,Espanol
+04-02-2024,Espanol,2 - 1,Levante
+10-02-2024,Santander,2 - 0,Espanol
+17-02-2024,Espanol,3 - 0,Mirandes
+24-02-2024,Eibar,2 - 3,Espanol
+02-03-2024,Espanol,0 - 0,Huesca
+10-03-2024,Alcorcon,1 - 1,Espanol
+17-03-2024,Zaragoza,0 - 1,Espanol
+23-03-2024,Espanol,1 - 1,Tenerife
+29-03-2024,Burgos,0 - 0,Espanol
+07-04-2024,Espanol,? - ?,Albacete
+13-08-2023,Leganes,0 - 1,FC Andorra
+18-08-2023,FC Andorra,3 - 2,Cartagena
+27-08-2023,Amorebieta,3 - 0,FC Andorra
+03-09-2023,FC Andorra,0 - 1,Tenerife
+10-09-2023,Mirandes,4 - 3,FC Andorra
+18-09-2023,FC Andorra,1 - 0,Oviedo
+23-09-2023,FC Andorra,0 - 0,Sp Gijon
+30-09-2023,Albacete,3 - 1,FC Andorra
+05-10-2023,FC Andorra,0 - 1,Zaragoza
+09-10-2023,Elche,2 - 1,FC Andorra
+15-10-2023,FC Andorra,2 - 0,Alcorcon
+22-10-2023,Valladolid,2 - 0,FC Andorra
+28-10-2023,FC Andorra,2 - 0,Levante
+05-11-2023,Racing Ferrol,1 - 0,FC Andorra
+12-11-2023,FC Andorra,1 - 3,Eldense
+19-11-2023,Villarreal II,0 - 0,FC Andorra
+25-11-2023,Burgos,0 - 0,FC Andorra
+03-12-2023,FC Andorra,1 - 0,Huesca
+10-12-2023,Eibar,2 - 2,FC Andorra
+16-12-2023,FC Andorra,1 - 1,Espanol
+19-12-2023,Santander,2 - 0,FC Andorra
+14-01-2024,FC Andorra,2 - 3,Leganes
+20-01-2024,Zaragoza,2 - 0,FC Andorra
+28-01-2024,FC Andorra,0 - 1,Elche
+03-02-2024,Tenerife,0 - 0,FC Andorra
+11-02-2024,Alcorcon,1 - 0,FC Andorra
+17-02-2024,FC Andorra,1 - 1,Villarreal II
+03-03-2024,FC Andorra,2 - 1,Valladolid
+08-03-2024,Huesca,2 - 0,FC Andorra
+13-03-2024,Levante,0 - 0,FC Andorra
+18-03-2024,FC Andorra,0 - 1,Amorebieta
+23-03-2024,Cartagena,1 - 0,FC Andorra
+30-03-2024,FC Andorra,1 - 0,Mirandes
+06-04-2024,Eldense,? - ?,FC Andorra
+13-08-2023,Burgos,1 - 1,Huesca
+21-08-2023,Huesca,0 - 2,Tenerife
+28-08-2023,Santander,0 - 0,Huesca
+03-09-2023,Huesca,1 - 1,Mirandes
+09-09-2023,Leganes,2 - 0,Huesca
+16-09-2023,Huesca,2 - 2,Villarreal II
+23-09-2023,Alcorcon,0 - 2,Huesca
+01-10-2023,Huesca,0 - 1,Sp Gijon
+04-10-2023,Oviedo,1 - 0,Huesca
+07-10-2023,Huesca,0 - 1,Eldense
+15-10-2023,Eibar,1 - 1,Huesca
+22-10-2023,Huesca,0 - 1,Elche
+29-10-2023,Huesca,0 - 0,Albacete
+05-11-2023,Amorebieta,0 - 1,Huesca
+12-11-2023,Huesca,1 - 1,Espanol
+18-11-2023,Zaragoza,0 - 2,Huesca
+24-11-2023,Huesca,0 - 1,Valladolid
+03-12-2023,FC Andorra,1 - 0,Huesca
+10-12-2023,Huesca,1 - 0,Racing Ferrol
+17-12-2023,Levante,2 - 1,Huesca
+21-12-2023,Huesca,3 - 0,Cartagena
+14-01-2024,Sp Gijon,0 - 0,Huesca
+21-01-2024,Huesca,2 - 3,Eibar
+28-01-2024,Villarreal II,1 - 1,Huesca
+03-02-2024,Huesca,1 - 0,Alcorcon
+10-02-2024,Eldense,0 - 0,Huesca
+18-02-2024,Huesca,0 - 0,Amorebieta
+26-02-2024,Mirandes,0 - 3,Huesca
+02-03-2024,Espanol,0 - 0,Huesca
+08-03-2024,Huesca,2 - 0,FC Andorra
+16-03-2024,Tenerife,0 - 0,Huesca
+24-03-2024,Huesca,3 - 0,Burgos
+30-03-2024,Albacete,1 - 1,Huesca
+07-04-2024,Huesca,? - ?,Leganes
+13-08-2023,Leganes,0 - 1,FC Andorra
+19-08-2023,Alcorcon,0 - 2,Leganes
+27-08-2023,Leganes,2 - 0,Albacete
+03-09-2023,Eibar,0 - 1,Leganes
+09-09-2023,Leganes,2 - 0,Huesca
+17-09-2023,Elche,1 - 0,Leganes
+24-09-2023,Mirandes,1 - 3,Leganes
+29-09-2023,Leganes,2 - 1,Santander
+04-10-2023,Burgos,1 - 0,Leganes
+07-10-2023,Leganes,0 - 0,Oviedo
+15-10-2023,Leganes,6 - 0,Amorebieta
+20-10-2023,Espanol,0 - 1,Leganes
+29-10-2023,Leganes,1 - 0,Villarreal II
+05-11-2023,Cartagena,0 - 3,Leganes
+10-11-2023,Leganes,2 - 1,Levante
+17-11-2023,Valladolid,1 - 1,Leganes
+26-11-2023,Leganes,2 - 2,Racing Ferrol
+02-12-2023,Zaragoza,1 - 0,Leganes
+10-12-2023,Leganes,1 - 1,Eldense
+16-12-2023,Sp Gijon,1 - 1,Leganes
+20-12-2023,Leganes,1 - 1,Tenerife
+14-01-2024,FC Andorra,2 - 3,Leganes
+22-01-2024,Leganes,2 - 0,Burgos
+27-01-2024,Oviedo,1 - 0,Leganes
+03-02-2024,Leganes,0 - 0,Valladolid
+09-02-2024,Levante,0 - 0,Leganes
+18-02-2024,Leganes,3 - 0,Alcorcon
+24-02-2024,Santander,2 - 1,Leganes
+03-03-2024,Leganes,0 - 2,Eibar
+11-03-2024,Amorebieta,0 - 1,Leganes
+17-03-2024,Leganes,4 - 0,Mirandes
+23-03-2024,Villarreal II,1 - 2,Leganes
+30-03-2024,Leganes,0 - 0,Cartagena
+07-04-2024,Huesca,? - ?,Leganes
+11-08-2023,Amorebieta,1 - 1,Levante
+19-08-2023,Levante,3 - 2,Burgos
+25-08-2023,Cartagena,0 - 1,Levante
+02-09-2023,Levante,1 - 1,Oviedo
+08-09-2023,Levante,1 - 4,Espanol
+16-09-2023,Alcorcon,0 - 2,Levante
+23-09-2023,Levante,2 - 0,Eldense
+30-09-2023,Elche,0 - 0,Levante
+03-10-2023,Levante,1 - 1,Villarreal II
+06-10-2023,Albacete,0 - 2,Levante
+16-10-2023,Levante,1 - 0,Racing Ferrol
+21-10-2023,Tenerife,0 - 0,Levante
+28-10-2023,FC Andorra,2 - 0,Levante
+04-11-2023,Levante,2 - 2,Mirandes
+10-11-2023,Leganes,2 - 1,Levante
+20-11-2023,Levante,2 - 4,Santander
+25-11-2023,Eibar,3 - 1,Levante
+02-12-2023,Levante,2 - 1,Valladolid
+09-12-2023,Sp Gijon,0 - 0,Levante
+17-12-2023,Levante,2 - 1,Huesca
+20-12-2023,Zaragoza,2 - 2,Levante
+13-01-2024,Levante,3 - 2,Albacete
+21-01-2024,Mirandes,1 - 1,Levante
+27-01-2024,Levante,0 - 0,Tenerife
+04-02-2024,Espanol,2 - 1,Levante
+09-02-2024,Levante,0 - 0,Leganes
+18-02-2024,Racing Ferrol,0 - 0,Levante
+02-03-2024,Oviedo,3 - 2,Levante
+10-03-2024,Levante,1 - 0,Sp Gijon
+13-03-2024,Levante,0 - 0,FC Andorra
+16-03-2024,Burgos,1 - 1,Levante
+24-03-2024,Levante,3 - 2,Elche
+30-03-2024,Valladolid,0 - 0,Levante
+06-04-2024,Levante,? - ?,Zaragoza
+14-08-2023,Mirandes,4 - 0,Alcorcon
+20-08-2023,Sp Gijon,3 - 0,Mirandes
+27-08-2023,Mirandes,0 - 1,Espanol
+03-09-2023,Huesca,1 - 1,Mirandes
+10-09-2023,Mirandes,4 - 3,FC Andorra
+17-09-2023,Amorebieta,2 - 0,Mirandes
+24-09-2023,Mirandes,1 - 3,Leganes
+01-10-2023,Zaragoza,0 - 1,Mirandes
+05-10-2023,Mirandes,1 - 3,Eibar
+08-10-2023,Valladolid,3 - 2,Mirandes
+14-10-2023,Mirandes,1 - 1,Tenerife
+21-10-2023,Villarreal II,0 - 3,Mirandes
+29-10-2023,Mirandes,2 - 1,Cartagena
+04-11-2023,Levante,2 - 2,Mirandes
+11-11-2023,Mirandes,1 - 2,Racing Ferrol
+19-11-2023,Eldense,2 - 2,Mirandes
+26-11-2023,Mirandes,2 - 1,Oviedo
+03-12-2023,Mirandes,0 - 0,Santander
+09-12-2023,Burgos,0 - 0,Mirandes
+16-12-2023,Mirandes,2 - 0,Albacete
+19-12-2023,Elche,0 - 0,Mirandes
+13-01-2024,Alcorcon,0 - 0,Mirandes
+21-01-2024,Mirandes,1 - 1,Levante
+26-01-2024,Eibar,1 - 0,Mirandes
+03-02-2024,Mirandes,3 - 0,Villarreal II
+11-02-2024,Cartagena,1 - 0,Mirandes
+17-02-2024,Espanol,3 - 0,Mirandes
+26-02-2024,Mirandes,0 - 3,Huesca
+03-03-2024,Tenerife,2 - 1,Mirandes
+09-03-2024,Mirandes,3 - 1,Eldense
+17-03-2024,Leganes,4 - 0,Mirandes
+24-03-2024,Mirandes,0 - 0,Zaragoza
+30-03-2024,FC Andorra,1 - 0,Mirandes
+07-04-2024,Mirandes,? - ?,Sp Gijon
+14-08-2023,Tenerife,1 - 0,Oviedo
+20-08-2023,Oviedo,1 - 1,Racing Ferrol
+26-08-2023,Burgos,1 - 0,Oviedo
+02-09-2023,Levante,1 - 1,Oviedo
+09-09-2023,Oviedo,0 - 0,Sp Gijon
+18-09-2023,FC Andorra,1 - 0,Oviedo
+24-09-2023,Oviedo,0 - 1,Valladolid
+01-10-2023,Eldense,1 - 3,Oviedo
+04-10-2023,Oviedo,1 - 0,Huesca
+07-10-2023,Leganes,0 - 0,Oviedo
+13-10-2023,Oviedo,3 - 0,Albacete
+21-10-2023,Amorebieta,0 - 0,Oviedo
+29-10-2023,Oviedo,2 - 0,Alcorcon
+06-11-2023,Zaragoza,0 - 0,Oviedo
+13-11-2023,Oviedo,1 - 1,Cartagena
+19-11-2023,Oviedo,2 - 1,Eibar
+26-11-2023,Mirandes,2 - 1,Oviedo
+01-12-2023,Oviedo,2 - 0,Espanol
+10-12-2023,Santander,2 - 2,Oviedo
+15-12-2023,Oviedo,3 - 2,Elche
+21-12-2023,Villarreal II,1 - 1,Oviedo
+13-01-2024,Oviedo,1 - 1,Amorebieta
+20-01-2024,Racing Ferrol,1 - 3,Oviedo
+27-01-2024,Oviedo,1 - 0,Leganes
+04-02-2024,Oviedo,1 - 1,Eldense
+10-02-2024,Sp Gijon,1 - 0,Oviedo
+17-02-2024,Oviedo,5 - 0,Burgos
+23-02-2024,Valladolid,3 - 0,Oviedo
+02-03-2024,Oviedo,3 - 2,Levante
+09-03-2024,Albacete,1 - 2,Oviedo
+16-03-2024,Oviedo,1 - 1,Santander
+23-03-2024,Alcorcon,1 - 0,Oviedo
+31-03-2024,Oviedo,2 - 1,Villarreal II
+05-04-2024,Elche,? - ?,Oviedo
+12-08-2023,Elche,0 - 1,Racing Ferrol
+20-08-2023,Oviedo,1 - 1,Racing Ferrol
+27-08-2023,Racing Ferrol,2 - 0,Sp Gijon
+01-09-2023,Alcorcon,1 - 1,Racing Ferrol
+10-09-2023,Racing Ferrol,2 - 2,Villarreal II
+17-09-2023,Eibar,2 - 0,Racing Ferrol
+25-09-2023,Racing Ferrol,1 - 0,Zaragoza
+02-10-2023,Espanol,3 - 0,Racing Ferrol
+05-10-2023,Racing Ferrol,1 - 0,Amorebieta
+08-10-2023,Racing Ferrol,1 - 1,Cartagena
+16-10-2023,Levante,1 - 0,Racing Ferrol
+22-10-2023,Racing Ferrol,1 - 1,Eldense
+29-10-2023,Santander,1 - 3,Racing Ferrol
+05-11-2023,Racing Ferrol,1 - 0,FC Andorra
+11-11-2023,Mirandes,1 - 2,Racing Ferrol
+19-11-2023,Racing Ferrol,1 - 1,Burgos
+26-11-2023,Leganes,2 - 2,Racing Ferrol
+03-12-2023,Racing Ferrol,5 - 4,Albacete
+10-12-2023,Huesca,1 - 0,Racing Ferrol
+17-12-2023,Racing Ferrol,3 - 1,Tenerife
+21-12-2023,Valladolid,0 - 1,Racing Ferrol
+13-01-2024,Racing Ferrol,0 - 0,Espanol
+20-01-2024,Racing Ferrol,1 - 3,Oviedo
+28-01-2024,Sp Gijon,1 - 2,Racing Ferrol
+04-02-2024,Racing Ferrol,1 - 1,Eibar
+11-02-2024,Burgos,2 - 0,Racing Ferrol
+18-02-2024,Racing Ferrol,0 - 0,Levante
+25-02-2024,Eldense,2 - 0,Racing Ferrol
+02-03-2024,Racing Ferrol,2 - 2,Santander
+09-03-2024,Cartagena,2 - 1,Racing Ferrol
+17-03-2024,Racing Ferrol,2 - 0,Valladolid
+25-03-2024,Albacete,1 - 1,Racing Ferrol
+31-03-2024,Racing Ferrol,1 - 0,Elche
+05-04-2024,Amorebieta,? - ?,Racing Ferrol
+12-08-2023,Santander,4 - 0,Eibar
+19-08-2023,Espanol,2 - 0,Santander
+28-08-2023,Santander,0 - 0,Huesca
+02-09-2023,Elche,1 - 1,Santander
+10-09-2023,Santander,1 - 0,Amorebieta
+15-09-2023,Zaragoza,1 - 1,Santander
+23-09-2023,Santander,2 - 1,Albacete
+29-09-2023,Leganes,2 - 1,Santander
+03-10-2023,Tenerife,2 - 0,Santander
+07-10-2023,Santander,3 - 2,Sp Gijon
+14-10-2023,Cartagena,2 - 3,Santander
+22-10-2023,Santander,3 - 0,Burgos
+29-10-2023,Santander,1 - 3,Racing Ferrol
+05-11-2023,Alcorcon,3 - 1,Santander
+11-11-2023,Santander,2 - 3,Valladolid
+20-11-2023,Levante,2 - 4,Santander
+25-11-2023,Santander,2 - 0,Villarreal II
+03-12-2023,Mirandes,0 - 0,Santander
+10-12-2023,Santander,2 - 2,Oviedo
+16-12-2023,Eldense,3 - 3,Santander
+19-12-2023,Santander,2 - 0,FC Andorra
+12-01-2024,Eibar,2 - 0,Santander
+21-01-2024,Santander,0 - 2,Cartagena
+29-01-2024,Valladolid,3 - 1,Santander
+04-02-2024,Amorebieta,0 - 1,Santander
+10-02-2024,Santander,2 - 0,Espanol
+18-02-2024,Albacete,2 - 0,Santander
+24-02-2024,Santander,2 - 1,Leganes
+02-03-2024,Racing Ferrol,2 - 2,Santander
+10-03-2024,Santander,4 - 2,Tenerife
+16-03-2024,Oviedo,1 - 1,Santander
+24-03-2024,Santander,2 - 1,Eldense
+30-03-2024,Sp Gijon,2 - 3,Santander
+08-04-2024,Santander,? - ?,Alcorcon
+11-08-2023,Valladolid,2 - 0,Sp Gijon
+20-08-2023,Sp Gijon,3 - 0,Mirandes
+27-08-2023,Racing Ferrol,2 - 0,Sp Gijon
+02-09-2023,Sp Gijon,2 - 1,Burgos
+09-09-2023,Oviedo,0 - 0,Sp Gijon
+17-09-2023,Sp Gijon,2 - 1,Tenerife
+23-09-2023,FC Andorra,0 - 0,Sp Gijon
+01-10-2023,Huesca,0 - 1,Sp Gijon
+04-10-2023,Sp Gijon,2 - 0,Elche
+07-10-2023,Santander,3 - 2,Sp Gijon
+14-10-2023,Sp Gijon,2 - 2,Zaragoza
+22-10-2023,Albacete,1 - 3,Sp Gijon
+28-10-2023,Sp Gijon,2 - 0,Espanol
+04-11-2023,Villarreal II,0 - 3,Sp Gijon
+11-11-2023,Sp Gijon,1 - 1,Amorebieta
+18-11-2023,Alcorcon,0 - 0,Sp Gijon
+27-11-2023,Sp Gijon,2 - 0,Eldense
+02-12-2023,Cartagena,1 - 0,Sp Gijon
+09-12-2023,Sp Gijon,0 - 0,Levante
+16-12-2023,Sp Gijon,1 - 1,Leganes
+20-12-2023,Eibar,1 - 1,Sp Gijon
+14-01-2024,Sp Gijon,0 - 0,Huesca
+20-01-2024,Tenerife,1 - 2,Sp Gijon
+28-01-2024,Sp Gijon,1 - 2,Racing Ferrol
+05-02-2024,Zaragoza,3 - 0,Sp Gijon
+10-02-2024,Sp Gijon,1 - 0,Oviedo
+17-02-2024,Sp Gijon,1 - 1,Valladolid
+25-02-2024,Burgos,1 - 0,Sp Gijon
+01-03-2024,Sp Gijon,2 - 1,Albacete
+10-03-2024,Levante,1 - 0,Sp Gijon
+16-03-2024,Sp Gijon,1 - 0,Alcorcon
+24-03-2024,Amorebieta,3 - 1,Sp Gijon
+30-03-2024,Sp Gijon,2 - 3,Santander
+07-04-2024,Mirandes,? - ?,Sp Gijon
+14-08-2023,Tenerife,1 - 0,Oviedo
+21-08-2023,Huesca,0 - 2,Tenerife
+26-08-2023,Tenerife,0 - 1,Zaragoza
+03-09-2023,FC Andorra,0 - 1,Tenerife
+09-09-2023,Tenerife,2 - 0,Albacete
+17-09-2023,Sp Gijon,2 - 1,Tenerife
+25-09-2023,Tenerife,1 - 0,Espanol
+30-09-2023,Eibar,3 - 0,Tenerife
+03-10-2023,Tenerife,2 - 0,Santander
+08-10-2023,Tenerife,2 - 1,Burgos
+14-10-2023,Mirandes,1 - 1,Tenerife
+21-10-2023,Tenerife,0 - 0,Levante
+28-10-2023,Elche,2 - 1,Tenerife
+04-11-2023,Valladolid,2 - 0,Tenerife
+12-11-2023,Tenerife,0 - 1,Villarreal II
+18-11-2023,Amorebieta,2 - 0,Tenerife
+26-11-2023,Tenerife,1 - 1,Cartagena
+02-12-2023,Eldense,0 - 3,Tenerife
+11-12-2023,Tenerife,1 - 0,Alcorcon
+17-12-2023,Racing Ferrol,3 - 1,Tenerife
+20-12-2023,Leganes,1 - 1,Tenerife
+13-01-2024,Tenerife,0 - 1,Elche
+20-01-2024,Tenerife,1 - 2,Sp Gijon
+27-01-2024,Levante,0 - 0,Tenerife
+03-02-2024,Tenerife,0 - 0,FC Andorra
+11-02-2024,Villarreal II,1 - 0,Tenerife
+19-02-2024,Tenerife,1 - 0,Eldense
+25-02-2024,Alcorcon,1 - 1,Tenerife
+03-03-2024,Tenerife,2 - 1,Mirandes
+10-03-2024,Santander,4 - 2,Tenerife
+16-03-2024,Tenerife,0 - 0,Huesca
+23-03-2024,Espanol,1 - 1,Tenerife
+31-03-2024,Zaragoza,3 - 1,Tenerife
+07-04-2024,Tenerife,? - ?,Eibar
+11-08-2023,Valladolid,2 - 0,Sp Gijon
+18-08-2023,Zaragoza,1 - 0,Valladolid
+26-08-2023,Valladolid,0 - 2,Alcorcon
+01-09-2023,Albacete,2 - 0,Valladolid
+10-09-2023,Valladolid,1 - 1,Elche
+16-09-2023,Valladolid,1 - 0,Cartagena
+24-09-2023,Oviedo,0 - 1,Valladolid
+01-10-2023,Valladolid,3 - 0,Burgos
+04-10-2023,Eldense,0 - 1,Valladolid
+08-10-2023,Valladolid,3 - 2,Mirandes
+14-10-2023,Espanol,2 - 0,Valladolid
+22-10-2023,Valladolid,2 - 0,FC Andorra
+27-10-2023,Eibar,5 - 1,Valladolid
+04-11-2023,Valladolid,2 - 0,Tenerife
+11-11-2023,Santander,2 - 3,Valladolid
+17-11-2023,Valladolid,1 - 1,Leganes
+24-11-2023,Huesca,0 - 1,Valladolid
+02-12-2023,Levante,2 - 1,Valladolid
+09-12-2023,Valladolid,2 - 1,Amorebieta
+18-12-2023,Villarreal II,1 - 0,Valladolid
+21-12-2023,Valladolid,0 - 1,Racing Ferrol
+13-01-2024,Burgos,1 - 0,Valladolid
+21-01-2024,Elche,0 - 0,Valladolid
+29-01-2024,Valladolid,3 - 1,Santander
+03-02-2024,Leganes,0 - 0,Valladolid
+12-02-2024,Valladolid,0 - 0,Albacete
+17-02-2024,Sp Gijon,1 - 1,Valladolid
+23-02-2024,Valladolid,3 - 0,Oviedo
+03-03-2024,FC Andorra,2 - 1,Valladolid
+09-03-2024,Valladolid,2 - 0,Zaragoza
+17-03-2024,Racing Ferrol,2 - 0,Valladolid
+24-03-2024,Valladolid,3 - 1,Eibar
+30-03-2024,Valladolid,0 - 0,Levante
+07-04-2024,Cartagena,? - ?,Valladolid
+12-08-2023,Zaragoza,2 - 0,Villarreal II
+21-08-2023,Villarreal II,3 - 1,Eldense
+26-08-2023,Elche,1 - 0,Villarreal II
+02-09-2023,Villarreal II,1 - 2,Cartagena
+10-09-2023,Racing Ferrol,2 - 2,Villarreal II
+16-09-2023,Huesca,2 - 2,Villarreal II
+24-09-2023,Villarreal II,3 - 1,Amorebieta
+30-09-2023,Villarreal II,2 - 2,Alcorcon
+03-10-2023,Levante,1 - 1,Villarreal II
+09-10-2023,Villarreal II,3 - 1,Espanol
+15-10-2023,Burgos,3 - 2,Villarreal II
+21-10-2023,Villarreal II,0 - 3,Mirandes
+29-10-2023,Leganes,1 - 0,Villarreal II
+04-11-2023,Villarreal II,0 - 3,Sp Gijon
+12-11-2023,Tenerife,0 - 1,Villarreal II
+19-11-2023,Villarreal II,0 - 0,FC Andorra
+25-11-2023,Santander,2 - 0,Villarreal II
+04-12-2023,Villarreal II,1 - 0,Eibar
+08-12-2023,Albacete,2 - 0,Villarreal II
+18-12-2023,Villarreal II,1 - 0,Valladolid
+21-12-2023,Villarreal II,1 - 1,Oviedo
+14-01-2024,Cartagena,4 - 1,Villarreal II
+20-01-2024,Espanol,2 - 1,Villarreal II
+28-01-2024,Villarreal II,1 - 1,Huesca
+03-02-2024,Mirandes,3 - 0,Villarreal II
+11-02-2024,Villarreal II,1 - 0,Tenerife
+17-02-2024,FC Andorra,1 - 1,Villarreal II
+24-02-2024,Villarreal II,0 - 0,Zaragoza
+02-03-2024,Eldense,2 - 0,Villarreal II
+10-03-2024,Villarreal II,0 - 1,Elche
+16-03-2024,Eibar,2 - 0,Villarreal II
+23-03-2024,Villarreal II,1 - 2,Leganes
+31-03-2024,Oviedo,2 - 1,Villarreal II
+07-04-2024,Villarreal II,? - ?,Burgos
+12-08-2023,Zaragoza,2 - 0,Villarreal II
+18-08-2023,Zaragoza,1 - 0,Valladolid
+26-08-2023,Tenerife,0 - 1,Zaragoza
+03-09-2023,Zaragoza,2 - 0,Eldense
+10-09-2023,Cartagena,1 - 3,Zaragoza
+15-09-2023,Zaragoza,1 - 1,Santander
+25-09-2023,Racing Ferrol,1 - 0,Zaragoza
+01-10-2023,Zaragoza,0 - 1,Mirandes
+05-10-2023,FC Andorra,0 - 1,Zaragoza
+08-10-2023,Zaragoza,0 - 2,Alcorcon
+14-10-2023,Sp Gijon,2 - 2,Zaragoza
+21-10-2023,Zaragoza,2 - 3,Eibar
+30-10-2023,Burgos,1 - 1,Zaragoza
+06-11-2023,Zaragoza,0 - 0,Oviedo
+11-11-2023,Elche,2 - 0,Zaragoza
+18-11-2023,Zaragoza,0 - 2,Huesca
+25-11-2023,Albacete,1 - 0,Zaragoza
+02-12-2023,Zaragoza,1 - 0,Leganes
+08-12-2023,Espanol,1 - 1,Zaragoza
+17-12-2023,Amorebieta,1 - 1,Zaragoza
+20-12-2023,Zaragoza,2 - 2,Levante
+15-01-2024,Eldense,1 - 1,Zaragoza
+20-01-2024,Zaragoza,2 - 0,FC Andorra
+27-01-2024,Alcorcon,0 - 0,Zaragoza
+05-02-2024,Zaragoza,3 - 0,Sp Gijon
+11-02-2024,Eibar,1 - 0,Zaragoza
+16-02-2024,Zaragoza,1 - 2,Cartagena
+24-02-2024,Villarreal II,0 - 0,Zaragoza
+03-03-2024,Zaragoza,0 - 1,Amorebieta
+09-03-2024,Valladolid,2 - 0,Zaragoza
+17-03-2024,Zaragoza,0 - 1,Espanol
+24-03-2024,Mirandes,0 - 0,Zaragoza
+31-03-2024,Zaragoza,3 - 1,Tenerife
+06-04-2024,Levante,? - ?,Zaragoza
