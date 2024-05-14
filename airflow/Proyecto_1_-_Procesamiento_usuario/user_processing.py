@@ -1,17 +1,11 @@
-# Es hora de implementar la última tarea de nuestro data pipeline para almacenar los 
-# usuarios procesados en la tabla que has creado al principio de esta sección. Y para 
-# ello necesitas utilizar el PostgresHook.
-
-# Así que el primer paso es importar el PostgresHook, a continuación, crear la función 
-# de python, _store_user con el fin de interactuar con la base de datos mediante el 
-# PostgresHook.
+# El siguiente paso es crear las dependencias entre las tareas
 
 from airflow import DAG
 from airflow.providers.postgres.operators.postgres import PostgresOperator
 from airflow.providers.http.sensors.http import HttpSensor
 from airflow.providers.http.operators.http import SimpleHttpOperator
 from airflow.operators.python import PythonOperator
-from airflow.providers.postgres.hooks.postgres import PostgresHook # Importamos PostgresHook
+from airflow.providers.postgres.hooks.postgres import PostgresHook
 
 import json
 from pandas import json_normalize
@@ -40,6 +34,7 @@ def _store_user():
 with DAG('user_processing', start_date=datetime(2022,12,22),
             schedule_interval='@daily', catchup=False) as dag:
     
+    # Crear una tabla en Postgres
     create_table = PostgresOperator(
         task_id = 'create_table',
         postgres_conn_id = 'postgres',
@@ -88,3 +83,5 @@ with DAG('user_processing', start_date=datetime(2022,12,22),
         task_id='store_user',
         python_callable=_store_user
     )
+
+    create_table >> is_api_available >> extract_user >> process_user >> store_user
