@@ -1,5 +1,3 @@
-# El siguiente paso es crear las dependencias entre las tareas
-
 from airflow import DAG
 from airflow.providers.postgres.operators.postgres import PostgresOperator
 from airflow.providers.http.sensors.http import HttpSensor
