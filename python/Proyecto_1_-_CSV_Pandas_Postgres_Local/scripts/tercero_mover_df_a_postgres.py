@@ -90,16 +90,4 @@ def mover_df_a_postgres_main():
 
 
 if __name__ == '__main__':
-    main_df = crear_base_df(cur)
-    df_creditscore = crear_creditscore_df(main_df)
-    df_exited_age_correlation = crear_exited_age_correlation(main_df)
-    df_exited_salary_correlation = crear_exited_salary_correlation(main_df)
-
-    crear_nuevas_tablas_en_postgres()
-    insertar_creditscore_tabla(df_creditscore)
-    insertar_exited_age_correlation_tabla(df_exited_age_correlation)
-    insertar_exited_salary_correlation_tabla(df_exited_salary_correlation)
-
-    conn.commit()
-    cur.close()
-    conn.close()
+    mover_df_a_postgres_main()

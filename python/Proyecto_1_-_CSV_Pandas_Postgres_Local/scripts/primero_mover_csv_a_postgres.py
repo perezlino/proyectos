@@ -130,9 +130,4 @@ def mover_csv_a_postgres_main():
 
 
 if __name__ == '__main__':
-    descargar_archivo_desde_url(url, dest_folder)
-    crear_tabla_postgres()
-    mover_csv_a_postgres()
-    conn.commit()
-    cur.close()
-    conn.close()
+    mover_csv_a_postgres_main()
