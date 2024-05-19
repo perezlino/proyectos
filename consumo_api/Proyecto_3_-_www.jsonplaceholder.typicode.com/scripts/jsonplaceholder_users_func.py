@@ -21,9 +21,8 @@ def obtener_users():
 def devolverDataframe(respuesta):
 
     try:
-        response = respuesta
-        #respuesta = json.loads(response.text.encode("utf-8"))             
-        df = pd.json_normalize(respuesta) 
+        response = respuesta           
+        df = pd.json_normalize(response) 
         logging.info('Se creó el Dataframe exitosamente')             
         return df
     except Exception as exception_message:
