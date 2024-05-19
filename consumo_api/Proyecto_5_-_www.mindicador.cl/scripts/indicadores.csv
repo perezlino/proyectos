@@ -1,0 +1,13 @@
+codigo,nombre,unidad_medida,fecha,valor
+uf,Unidad de fomento (UF),Pesos,2024-05-18T04:00:00.000Z,37360.69
+ivp,Indice de valor promedio (IVP),Pesos,2024-05-18T04:00:00.000Z,38689.96
+dolar,Dólar observado,Pesos,2024-05-17T04:00:00.000Z,901.53
+dolar_intercambio,Dólar acuerdo,Pesos,2014-11-13T03:00:00.000Z,758.87
+euro,Euro,Pesos,2024-05-17T04:00:00.000Z,979.82
+ipc,Indice de Precios al Consumidor (IPC),Porcentaje,2024-04-01T03:00:00.000Z,0.5
+utm,Unidad Tributaria Mensual (UTM),Pesos,2024-05-01T04:00:00.000Z,65443.0
+imacec,Imacec,Porcentaje,2024-03-01T03:00:00.000Z,0.8
+tpm,Tasa Política Monetaria (TPM),Porcentaje,2024-05-17T04:00:00.000Z,6.5
+libra_cobre,Libra de Cobre,Dólar,2024-05-17T04:00:00.000Z,4.59
+tasa_desempleo,Tasa de desempleo,Porcentaje,2024-03-01T03:00:00.000Z,8.68
+bitcoin,Bitcoin,Dólar,2024-05-15T04:00:00.000Z,66239.13
