@@ -1,7 +1,3 @@
-networks:
-    hadoop-net:
-        driver: bridge
-
 services:
 
   namenode:
@@ -35,3 +31,6 @@ services:
     command: /opt/bd/start-daemons.sh
     networks:
         - hadoop-net
+
+networks:
+    hadoop-net:
