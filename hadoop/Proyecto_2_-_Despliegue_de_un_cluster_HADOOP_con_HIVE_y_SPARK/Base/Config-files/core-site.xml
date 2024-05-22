@@ -1,0 +1,12 @@
+<!-- 
+    En este fichero vamos a configurar la localización del NameNode. En nuestro caso 
+    será una máquina que denominaremos hadoop-master. 
+-->
+
+<?xml version="1.0"?>
+<configuration>
+    <property>
+        <name>fs.defaultFS</name>
+        <value>hdfs://hadoop-master:9000/</value>
+    </property>
+</configuration>

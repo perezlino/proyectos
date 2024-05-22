@@ -1,0 +1,11 @@
+<!-- 
+    En este fichero se el MapReduce. En nuestro caso configuraremos el MapReduce de 
+    nuestro Hadoop al nuevo al framework MapReduce Yarn.
+-->
+<?xml version="1.0"?>
+<configuration>
+    <property>
+        <name>mapreduce.framework.name</name>
+        <value>yarn</value>
+    </property>
+</configuration>
