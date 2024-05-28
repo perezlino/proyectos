@@ -3,7 +3,7 @@ LABEL Alfonso Perez Lino
 
 WORKDIR /root
 
-ADD config/bootstrap.sh /etc/bootstrap.sh
+ADD Config-files/bootstrap.sh /etc/bootstrap.sh
 RUN chown root:root /etc/bootstrap.sh
 RUN chmod 700 /etc/bootstrap.sh
 
