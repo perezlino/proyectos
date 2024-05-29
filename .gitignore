@@ -1,0 +1,13 @@
+# Ignorar archivos de compilación
+#*.class
+#*.jar
+
+# Ignorar directorio de dependencias de Maven
+/venv
+/scrapy_projects
+
+# Ignorar archivos de configuración sensibles
+#config.ini
+
+# Negar la regla de ignorar todos los archivos .log
+#!important.log
