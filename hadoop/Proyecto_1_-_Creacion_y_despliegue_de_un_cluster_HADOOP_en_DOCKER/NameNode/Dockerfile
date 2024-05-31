@@ -10,8 +10,8 @@ USER root
 ENV HADOOP_VERSION 3.3.6
 ENV LOG_TAG "[NameNode Hadoop_${HADOOP_VERSION}]:"
 ENV BASE_DIR /opt/bd
-ENV HADOOP_HOME ${BASE_DIR}/hadoop/
-ENV HADOOP_CONF_DIR ${HADOOP_HOME}/etc/hadoop/
+ENV HADOOP_HOME ${BASE_DIR}/hadoop
+ENV HADOOP_CONF_DIR ${HADOOP_HOME}/etc/hadoop
 ENV DATA_DIR /var/data/hadoop/hdfs
 
 # Creamos las carpetas para los datos de HDFS del NameNode y hacemos el usuario hdadmin propietario de ellas 
@@ -45,7 +45,7 @@ USER hdadmin
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
 #ENV HADOOP_HOME ${BASE_DIR}/hadoop/
 #ENV HADOOP_CONF_DIR ${HADOOP_HOME}/etc/hadoop/
-ENV PATH ${PATH}:${HADOOP_HOME}/bin/:${HADOOP_HOME}/sbin/
+ENV PATH ${PATH}:${HADOOP_HOME}/bin:${HADOOP_HOME}/sbin
 
 WORKDIR ${HADOOP_HOME}
 

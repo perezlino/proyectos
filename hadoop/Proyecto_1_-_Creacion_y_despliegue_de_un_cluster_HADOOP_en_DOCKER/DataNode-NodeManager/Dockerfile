@@ -1,7 +1,7 @@
 # Usamos como base el contenedor creado anteriormente
 FROM hadoop-base-image:latest
 
-MAINTAINER Alfonso Perez Lino
+LABEL Alfonso Perez Lino
 
 # Cambiamos al usuario root
 USER root
@@ -10,8 +10,8 @@ USER root
 ENV HADOOP_VERSION 3.3.6
 ENV LOG_TAG "[DNNM Hadoop_${HADOOP_VERSION}]:"
 ENV BASE_DIR /opt/bd
-ENV HADOOP_HOME ${BASE_DIR}/hadoop/
-ENV HADOOP_CONF_DIR ${HADOOP_HOME}/etc/hadoop/
+ENV HADOOP_HOME ${BASE_DIR}/hadoop
+ENV HADOOP_CONF_DIR ${HADOOP_HOME}/etc/hadoop
 ENV DATA_DIR /var/data/hadoop/hdfs
 
 # Creamos las carpetas para los datos de HDFS del DataNode y hacemos el usuario hdadmin propietario de ellas
@@ -51,9 +51,9 @@ USER hdadmin
 
 # Definimos las variables de entorno
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
-ENV HADOOP_HOME ${BASE_DIR}/hadoop/
-ENV HADOOP_CONF_DIR ${HADOOP_HOME}/etc/hadoop/
-ENV PATH ${PATH}:${HADOOP_HOME}/bin/:${HADOOP_HOME}/sbin/
+ENV HADOOP_HOME ${BASE_DIR}/hadoop
+ENV HADOOP_CONF_DIR ${HADOOP_HOME}/etc/hadoop
+ENV PATH ${PATH}:${HADOOP_HOME}/bin:${HADOOP_HOME}/sbin
 
 # Establecemos el directorio de trabajo
 WORKDIR ${HADOOP_HOME}

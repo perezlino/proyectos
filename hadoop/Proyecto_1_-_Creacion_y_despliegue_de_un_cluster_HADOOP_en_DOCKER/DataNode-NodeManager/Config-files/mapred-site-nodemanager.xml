@@ -24,22 +24,14 @@
     <final>true</final>
   </property>
 
-  <property>
+ <!-- MR ApplicationMaster configuration -->
+
+   <property>
     <!-- User added environment variables for the MR App Master process.
          In this case, it specifies the location of the libraries for the MR App Master-->
     <name>yarn.app.mapreduce.am.env</name>
     <value>HADOOP_MAPRED_HOME=${HADOOP_HOME}</value>
   </property>
-  <property>
-    <name>mapreduce.map.env</name>
-    <value>HADOOP_MAPRED_HOME=${HADOOP_HOME}</value>
-  </property>
-  <property>
-    <name>mapreduce.reduce.env</name>
-    <value>HADOOP_MAPRED_HOME=${HADOOP_HOME}</value>
-  </property>
-
- <!-- MR ApplicationMaster configuration -->
 
   <property>
     <!--  The number of virtual CPU cores the MR AppMaster needs (default value 1) -->

@@ -10,8 +10,8 @@ USER root
 ENV HADOOP_VERSION 3.3.6
 ENV LOG_TAG "[Resourcemanager Hadoop_${HADOOP_VERSION}]:"
 ENV BASE_DIR /opt/bd
-ENV HADOOP_HOME ${BASE_DIR}/hadoop/
-ENV HADOOP_CONF_DIR ${HADOOP_HOME}/etc/hadoop/
+ENV HADOOP_HOME ${BASE_DIR}/hadoop
+ENV HADOOP_CONF_DIR ${HADOOP_HOME}/etc/hadoop
 
 # Creamos la carpetapara los ficheros de log
 RUN echo "$LOG_TAG Creando carpeta para los ficheros de log" && \
@@ -40,10 +40,10 @@ RUN useradd -u 2000 luser
 USER hdadmin
 
 # Definimos las variables de entorno
-ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
-ENV HADOOP_HOME ${BASE_DIR}/hadoop/
-ENV HADOOP_CONF_DIR ${HADOOP_HOME}/etc/hadoop/
-ENV PATH ${PATH}:${HADOOP_HOME}/bin/:${HADOOP_HOME}/sbin/
+ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
+ENV HADOOP_HOME ${BASE_DIR}/hadoop
+ENV HADOOP_CONF_DIR ${HADOOP_HOME}/etc/hadoop
+ENV PATH ${PATH}:${HADOOP_HOME}/bin:${HADOOP_HOME}/sbin
 
 # Cambiamos al directorio de trabajo
 WORKDIR ${HADOOP_HOME}
