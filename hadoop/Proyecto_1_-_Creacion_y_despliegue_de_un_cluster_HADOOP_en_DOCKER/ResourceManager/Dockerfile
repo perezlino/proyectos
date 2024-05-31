@@ -1,7 +1,6 @@
 # Partimos del contenedor creado anteriormente
 FROM hadoop-base-image:latest
-
-MAINTAINER Alfonso Perez Lino
+LABEL Alfonso Perez Lino
 
 # Cambiamos al usuario root
 USER root

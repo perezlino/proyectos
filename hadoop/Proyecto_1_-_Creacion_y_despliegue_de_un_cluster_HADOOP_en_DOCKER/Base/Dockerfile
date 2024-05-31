@@ -1,6 +1,6 @@
 # Desplegamos una máquina con el SO Linux Ubuntu
 FROM ubuntu:latest
-MAINTAINER Alfonso Perez Lino
+LABEL Alfonso Perez Lino
 
 # Cambiamos al usuario root
 USER root
