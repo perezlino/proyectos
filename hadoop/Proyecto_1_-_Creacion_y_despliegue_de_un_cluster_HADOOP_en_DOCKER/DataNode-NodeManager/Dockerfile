@@ -38,9 +38,11 @@ RUN chmod +x ${BASE_DIR}/start-daemons.sh && \
     chown -R hdadmin:hadoop ${BASE_DIR}
 
 # Establecemos los puertos para los servicios web del Datanode
+# Por defecto es el puerto 
 EXPOSE 9864 9865 9866 9867
 
 # Establecemos los puertos para los servicios web del NodeManager
+# Por defecto es el puerto 8042
 EXPOSE 8040 8042 8044 8048
 
 # # Establecemos los puertos para los servicios web del MapReduce
