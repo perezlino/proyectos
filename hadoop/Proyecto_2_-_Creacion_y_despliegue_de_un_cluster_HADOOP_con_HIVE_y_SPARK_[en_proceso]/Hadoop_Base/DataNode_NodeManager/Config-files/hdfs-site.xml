@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!-- 
+    En este archivo configuramos algunas propiedades del sistema de archivos.
+-->
+<configuration>
+    <property>
+        <name>dfs.datanode.data.dir</name>
+        <value>/opt/bd/hdfs/datanode</value>
+        <description>DataNode directory</description>
+    </property>
+</configuration>

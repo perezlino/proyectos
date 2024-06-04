@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+    <property>
+    <!-- El runtime framework para ejecutar MapReduce jobs. Puede ser local, classic o yarn.
+        Por defecto es "local" -->
+        <name>mapreduce.framework.name</name>
+        <value>yarn</value>
+    </property>
+    <property>
+    <!-- CLASSPATH para aplicaciones MR. Una lista separada por comas de entradas CLASSPATH. 
+        Si mapreduce.application.framework está establecido entonces esto debe especificar 
+        el classpath apropiado para ese archivo, y el nombre del archivo debe estar presente 
+        en el classpath. Si mapreduce.app-submission.cross-platform es falso, se utilizará la 
+        sintaxis de expansión vairable del entorno específico de la plataforma para construir 
+        las entradas CLASSPATH por defecto. Para Linux: $HADOOP_MAPRED_HOME/share/hadoop/mapreduce/*, 
+        $HADOOP_MAPRED_HOME/share/hadoop/mapreduce/lib/*. Para Windows: %HADOOP_MAPRED_HOME%/share/hadoop/mapreduce/*, 
+        %HADOOP_MAPRED_HOME%/share/hadoop/mapreduce/lib/*. Si mapreduce.app-submission.cross-platform 
+        es true, se utilizará el CLASSPATH por defecto agnóstico de plataforma para aplicaciones 
+        MR: {{HADOOP_MAPRED_HOME}}/share/hadoop/mapreduce/*, {{HADOOP_MAPRED_HOME}}/share/hadoop/mapreduce/lib/* 
+        El marcador de expansión de parámetros será sustituido por NodeManager en el lanzamiento del contenedor 
+        en función del SO subyacente según corresponda. -->
+        <name>mapreduce.application.classpath</name>
+        <value>/opt/bd/hadoop/share/hadoop/mapreduce/*</value>
+    </property>    
+</configuration>

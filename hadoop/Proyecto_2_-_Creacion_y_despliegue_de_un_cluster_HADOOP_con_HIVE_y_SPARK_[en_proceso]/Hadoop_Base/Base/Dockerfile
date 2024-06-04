@@ -7,7 +7,7 @@ USER root
 
 # Establecemos las variables
 ENV HADOOP_VERSION 3.3.6
-ENV BASE_DIR /root
+ENV BASE_DIR /opt/bd
 ENV LOG_TAG "[BASE Hadoop_${HADOOP_VERSION}]:"
 ENV REPOSITORY https://dlcdn.apache.org/hadoop/common
 
@@ -23,14 +23,18 @@ RUN echo "$LOG_TAG actualizando e instalando paquetes básicos" && \
 RUN echo "$LOG_TAG configurando idioma" && \
     locale-gen es_ES.UTF-8 && update-locale LANG=es_ES.UTF-8    
 
-# Cambiamos a la carpeta /root
+# Creamos una carpeta para la instalación en /opt/bd
+RUN mkdir -p ${BASE_DIR}
+
+# Cambiamos a la carpeta /opt/bd
 WORKDIR ${BASE_DIR}
 
-#Ahora nos bajamos el software de Hadoop y lo dejamos en /usr/local/hadoop
+# Descargamos la última versión de Hadoop, la 3.3.6 en /opt/bd
+# Modifico el nombre del directorio "hadoop-3.3.6" a "hadoop"
 RUN echo "$LOG_TAG Descargando Hadoop" && \
-    wget "${REPOSITORY}/hadoop-${HADOOP_VERSION}/hadoop-${HADOOP_VERSION}.tar.gz" && \
-    tar -xzvf hadoop-${HADOOP_VERSION}.tar.gz && \
-    mv hadoop-${HADOOP_VERSION} /usr/local/hadoop && \
+    curl -fLO "${REPOSITORY}/hadoop-${HADOOP_VERSION}/hadoop-${HADOOP_VERSION}.tar.gz" && \
+    tar -xzf hadoop-${HADOOP_VERSION}.tar.gz && \
+    mv hadoop-${HADOOP_VERSION} hadoop && \
     rm hadoop-${HADOOP_VERSION}.tar.gz
 
 #Establecemos las variables de entorno JAVA_HOME apuntando a la ruta del JDK, 
@@ -38,63 +42,32 @@ RUN echo "$LOG_TAG Descargando Hadoop" && \
 #la variable PATH las rutas con los binarios y scripts para gestionar Hadoop.
 RUN echo "$LOG_TAG Establecer variables de entorno"
 ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 
-ENV HADOOP_HOME=/usr/local/hadoop
-ENV PATH=$PATH:{HADOOP_HOME}/bin:{HADOOP_HOME}/sbin 
+ENV HADOOP_HOME ${BASE_DIR}/hadoop
+ENV HADOOP_CONF_DIR ${HADOOP_HOME}/etc/hadoop
+ENV PATH=$PATH:${HADOOP_HOME}/bin:${HADOOP_HOME}/sbin
 
+#Creamos los directorios para los namenodes, los datanodes y los logs de Hadoop
+RUN echo "$LOG_TAG Crear directorio logs y directorio /opt/bd/.ssh" 
+RUN mkdir ${HADOOP_HOME}/logs
+RUN mkdir -p /opt/bd/.ssh/
+
+#Hadoop quiere hacer conexiones SSH pero sin necesidad de introducir contraseña cuando realiza alguna comunicacion
+#con el resto de nodos. Para eso debemos intercambiar las llaves publicas entre todos los nodos (namenode y datanodes)
+#La opcion más eficiente es crear las llaves en una imagen base y luego esta imagen utilizarla para crear el namenode
+# y crear los datanodes, de esta manera, todos los nodos tendran acceso a las llaves.
 #Creamos las claves ssh necesarias para que se comunique el nodo master con los nodos slaves. Al tener todos las 
 #mismas claves e incluirlas como claves autorizadas, el acceso ssh entre los distintos nodos está garantizado.
+#Para verificar que todos los nodos esten conectados debemos utilizar el comando "ssh" seguido del nombre del nodo o IP,
+#entonces, debemos probarlo desde todos los nodos, por ejemplo, desde el worker "worker1" escribir "ssh hadoop-master" y 
+# se debe conectar al nodo hadoop-master, o escribir "ssh worker2" y se debe conectar a ese nodo.
+
 RUN echo "$LOG_TAG Crear claves SSH" && \
     ssh-keygen -t rsa -f ~/.ssh/id_rsa -P '' && \
     cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 
-#Creamos los directorios para los namenodes, los datanodes y los logs de Hadoop
-RUN echo "$LOG_TAG Crear directorios namenode, datanode y logs" && \
-    mkdir -p ${BASE_DIR}/hdfs/namenode && \ 
-    mkdir -p ${BASE_DIR}/hdfs/datanode && \
-    mkdir $HADOOP_HOME/logs
-
-#Copiamos los archivos de configuración y scripts que tenemos en el directorio "Config-files" de nuestro PC al 
-#directorio /tmp del contenedor. De ahí los vamos moviendo cada uno a su ubicación final. Más adelante explico 
-#cada archivo y su contenido.
-COPY Config-files/* /tmp/
-
-RUN echo "$LOG_TAG Mover archivos" && \
-    mv /tmp/start-hadoop.sh ${BASE_DIR}/start-hadoop.sh && \
-    mv /tmp/hadoop-env.sh /usr/local/hadoop/hadoop-env.sh && \
-    mv /tmp/hdfs-site.xml /usr/local/hadoop/hdfs-site.xml && \ 
-    mv /tmp/core-site.xml /usr/local/hadoop/core-site.xml && \
-    mv /tmp/mapred-site.xml /usr/local/hadoop/mapred-site.xml && \
-    mv /tmp/yarn-site.xml /usr/local/hadoop/yarn-site.xml && \
-    mv /tmp/slaves /usr/local/hadoop/slaves && \
-    mv /tmp/ssh_config ${BASE_DIR}/.ssh/config 
-
-RUN echo "$LOG_TAG Cambiar permisos de ejecución" && \
-    chmod +x ${BASE_DIR}/start-hadoop.sh && \
-    chmod +x ${HADOOP_HOME}/sbin/start-dfs.sh && \
-    chmod +x ${HADOOP_HOME}/sbin/start-yarn.sh 
-
-#Formateamos el sistema de archivos de hadoop
-RUN echo "$LOG_TAG Formatear el sistema de archivos de hadoop" && \
-    ${HADOOP_HOME}/bin/hdfs namenode -format -nonInteractive 2> /dev/null
-
-#Como proceso de los contenedores configuramos el demonio de ssh. Asi el nodo master podrá acceder a los nodos slave 
-#para arrancar los procesos de Hadoop necesarios para que formen parte del cluster.
-CMD [ "sh", "-c", "service ssh start; bash"]
-
-#Por último dejamos abiertos unos cuantos puertos. En principio no son necesarios todos, pero los dejo así por si en 
-#un futuro los necesito.
-# Hdfs ports
-EXPOSE 9000 50010 50020 50070 50075 50090
-EXPOSE 9871 9870 9820 9869 9868 9867 9866 9865 9864
-# Mapred ports
-EXPOSE 19888
-#Yarn ports
-EXPOSE 8030 8031 8032 8033 8040 8042 8088 8188
-#Other ports
-EXPOSE 49707 2122
-
-
-
-
-
-
+#Copiamos los archivos de configuración que tenemos en el directorio "Config-files" de nuestro PC al 
+#directorio /etc/ssh/config del contenedor. 
+#Agregar al archivo "workers" los nombres host de los datanodes y si aparece "localhost" borrarlo
+RUN echo "$LOG_TAG Copiar archivos"
+COPY Config-files/sshd_config /etc/ssh/sshd_config 
+COPY Config-files/workers ${HADOOP_CONF_DIR}/workers

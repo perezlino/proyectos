@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!-- 
+    En este archivo configuramos algunas propiedades del sistema de archivos.
+-->
+<configuration>
+    <property>
+        <name>dfs.namenode.name.dir</name>
+        <value>/opt/bd/hdfs/namenode</value>
+        <description>NameNode directory for namespace and transaction logs storage.</description>
+        <final>true</final>
+    </property>
+    <property>
+    <!-- Replicación de bloques por defecto. Por defecto son 3. El número real de réplicas puede 
+        especificarse al crear el archivo. Se utiliza el valor predeterminado si no se especifica 
+        la replicación en el momento de la creación. -->
+        <name>dfs.replication</name>
+        <value>3</value>
+    </property>    
+    <property>
+    <!-- Tamaño de bloque (valor por defecto 128m). El tamaño de bloque por defecto para los nuevos 
+        archivos, en bytes. Puede utilizar los siguientes sufijos (sin distinguir mayúsculas de 
+        minúsculas): k(kilo), m(mega), g(giga), t(tera), p(peta), e(exa) para especificar el tamaño 
+        (como 128k, 512m, 1g, etc.), o proporcionar el tamaño completo en bytes (como 134217728 para 
+        128 MB). -->
+        <name>dfs.blocksize</name>
+        <value>64m</value>
+    </property>  
+    <property>
+    <!-- La dirección y el puerto base en los que escuchará la interfaz de usuario web 
+        de dfs namenode (valor por defecto 9870) -->
+        <name>dfs.namenode.http-address</name>
+        <value>0.0.0.0:9870</value>
+    </property>     
+    <property>
+    <!-- Determina el intervalo de latido del datanode en segundos. Puede utilizar los 
+        siguientes sufijos (sin distinguir mayúsculas de minúsculas): ms(milis), s(sec), 
+        m(min), h(hour), d(day) para especificar el tiempo (como 2s, 2m, 1h, etc.). O 
+        proporcione el número completo en segundos (como 30 para 30 segundos). Si no se 
+        especifica ninguna unidad de tiempo, se asume que son segundos. -->
+        <name>dfs.heartbeat.interval</name>
+        <value>1</value>
+    </property>         
+    <property>
+    <!-- Este tiempo decide el intervalo para comprobar si hay datanodes muertos. Con este 
+        valor y dfs.heartbeat.interval, también se calcula el intervalo para decidir si el 
+        datanode está muerto o no. La unidad de esta configuración es el milisegundo. -->
+        <name>dfs.namenode.heartbeat.recheck-interval</name>
+        <value>500</value>    
+    </property>      
+    <property>
+    <!-- Nombra un archivo que contiene una lista de hosts a los que se permite conectarse 
+        al namenode. Debe especificarse la ruta completa del archivo. Si el valor está vacío, 
+        todos los hosts están permitidos.  -->
+        <name>dfs.hosts</name>
+        <value>/opt/bd/hadoop/etc/hadoop/workers</value>    
+    </property>           
+</configuration>

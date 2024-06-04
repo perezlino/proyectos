@@ -1,0 +1,27 @@
+services:
+
+# Primero tenemos que crar la imagen base "hadoop-cluster-base" y luego ejecutar el docker-compose.yml
+
+  hadoop-master:
+    build: ./NameNode_ResourceManager
+    image: hadoop-cluster-master:latest
+    container_name: hadoop-master
+    hostname: hadoop-master
+    command: /opt/bd/start-services.sh
+    ports:
+        - "9870:9870"
+        - "8088:8088"        
+    networks:
+        - hadoop
+
+  worker:
+    build: ./DataNode_NodeManager
+    image: hadoop-cluster-slave:latest
+    depends_on:
+        - hadoop-master
+    command: /opt/bd/start-services.sh
+    networks:
+        - hadoop
+
+networks:
+    hadoop:
