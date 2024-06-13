@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!--
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License. See accompanying LICENSE file.
+-->
+<configuration>
+<!-- Site specific YARN configuration properties -->
+      <property>
+        <!-- El nombre de host del ResourceManager -->
+        <name>yarn.resourcemanager.hostname</name>
+        <value>hadoop-master</value>
+        <final>true</final>
+      </property>
+
+  <property>
+    <!-- Habilitar la autodetección de las capacidades del nodo como memoria y CPU -->
+    <name>yarn.nodemanager.resource.detect-hardware-capabilities</name>
+    <value>true</value>
+    <final>true</final>
+  </property>
+
+  <property>
+    <!-- Número de vcores que se pueden asignar a los contenedores.
+         Si se establece en -1 y yarn.nodemanager.resource.detect-hardware-capabilities es true, 
+         se determina automáticamente a partir del hardware (valor por defecto 8) -->
+    <name>yarn.nodemanager.resource.cpu-vcores</name>
+    <value>-1</value>
+    <final>true</final>
+  </property>
+
+  <property>
+    <!-- Cantidad de memoria física, en MB, que se puede asignar a los contenedores. 
+        Si se establece a -1 y yarn.nodemanager.resource.detect-hardware-capabilities es true, 
+        se calcula automáticamente (valor por defecto 8192) -->
+    <name>yarn.nodemanager.resource.memory-mb</name>
+    <value>-1</value>
+    <final>true</final>
+  </property>
+
+  <property>
+    <!-- Si se aplicarán límites de memoria virtual a los contenedores (por defecto true) -->
+    <name>yarn.nodemanager.vmem-check-enabled</name>
+    <value>false</value>
+    <final>true</final>
+  </property>
+
+
+ <property>
+    <!-- Una lista separada por comas de los servicios auxiliares implementados ny los NodeManagers. 
+        En este caso, indica a los NodeManagers que tienen que implementar el servicio MapReduce shuffle-->
+    <name>yarn.nodemanager.aux-services</name>
+    <value>mapreduce_shuffle</value>
+    <final>true</final>
+  </property>
+
+  <property>
+    <!-- Clase que implementa el servicio de MapReduce shuffling -->
+    <name>yarn.nodemanager.aux-services.mapreduce_shuffle.class</name>
+    <value>org.apache.hadoop.mapred.ShuffleHandler</value>
+    <final>true</final>
+  </property>
+</configuration>
+
