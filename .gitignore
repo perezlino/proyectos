@@ -7,7 +7,11 @@
 /scrapy_projects
 
 # Ignorar archivos de configuración sensibles
-#config.ini
-
-# Negar la regla de ignorar todos los archivos .log
-#!important.log
+/hadoop/Proyecto_2_-_Creacion_y_despliegue_de_un_cluster_HADOOP_con_HIVE_y_SPARK/1-despliegue_ecosistema_hadoop.ipynb
+/hadoop/Proyecto_2_-_Creacion_y_despliegue_de_un_cluster_HADOOP_con_HIVE_y_SPARK/2-apuntes.ipynb
+/hadoop/Proyecto_2_-_Creacion_y_despliegue_de_un_cluster_HADOOP_con_HIVE_y_SPARK/Hadoop_Hive/1-analisis_nodo_hive.ipynb
+/hadoop/Proyecto_1_-_Creacion_y_despliegue_de_un_cluster_HADOOP_en_DOCKER/1-analisis_imagen_base.ipynb
+/hadoop/Proyecto_1_-_Creacion_y_despliegue_de_un_cluster_HADOOP_en_DOCKER/2-analisis_namenode.ipynb
+/hadoop/Proyecto_1_-_Creacion_y_despliegue_de_un_cluster_HADOOP_en_DOCKER/3-analisis_resource_manager.ipynb
+/hadoop/Proyecto_1_-_Creacion_y_despliegue_de_un_cluster_HADOOP_en_DOCKER/4-analisis_datanode_nodemanager.ipynb
+/hadoop/Proyecto_1_-_Creacion_y_despliegue_de_un_cluster_HADOOP_en_DOCKER/5-despliegue_ecosistema_hadoop.ipynb
