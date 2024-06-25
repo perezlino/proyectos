@@ -19,14 +19,24 @@ PARAM_PROYECTO=$2     #<------ Parametro que se va a recibir en la posicion 2 en
 ## @section Programa
 ##
 
+## Antes de ejecutar este archivo mover archivos:
+## - persona.avsc
+## - empresa.avsc
+## - transaccion.avsc
+##
+## al directorio /hadoop-data/archivos ubicado en el contenedor "namenode"
+
 #Eliminamos la carpeta si existe
 echo "Eliminando carpeta raiz..."
 hdfs dfs -rm -r -f /user/$PARAM_RAIZ/$PARAM_PROYECTO
 
+#Directorio para almacenar archivos de datos
+hdfs dfs -mkdir -p /user/$PARAM_RAIZ/$PARAM_PROYECTO/archivos
+
 #Estructura de carpetas para "landing_tmp"
 echo "Creando la estructura de carpetas para landing_tmp..."
 hdfs dfs -mkdir -p \
-
+/user/$PARAM_RAIZ/$PARAM_PROYECTO \
 /user/$PARAM_RAIZ/$PARAM_PROYECTO/database/landing_tmp/persona \
 /user/$PARAM_RAIZ/$PARAM_PROYECTO/database/landing_tmp/empresa \
 /user/$PARAM_RAIZ/$PARAM_PROYECTO/database/landing_tmp/transaccion 
@@ -57,12 +67,20 @@ hdfs dfs -mkdir -p \
 /user/$PARAM_RAIZ/$PARAM_PROYECTO/database/smart/transaccion_por_trabajo \
 /user/$PARAM_RAIZ/$PARAM_PROYECTO/database/smart/transaccion_por_empresa 
 
+#Subida de archivos de datos
+echo "Subiendo archivos de schema..."
+hdfs dfs -put \
+/hadoop-data/archivos/persona.data \
+/hadoop-data/archivos/empresa.data \
+/hadoop-data/archivos/transacciones.data \
+/user/$PARAM_RAIZ/$PARAM_PROYECTO/archivos
+
 #Subida de archivos de "schema"
 echo "Subiendo archivos de schema..."
 hdfs dfs -put \
-/home/hadoop/data/persona.avsc \
-/home/hadoop/data/empresa.avsc \
-/home/hadoop/data/transaccion.avsc \
+/hadoop-data/archivos/persona.avsc \
+/hadoop-data/archivos/empresa.avsc \
+/hadoop-data/archivos/transaccion.avsc \
 /user/$PARAM_RAIZ/$PARAM_PROYECTO/schema/landing
 
 
