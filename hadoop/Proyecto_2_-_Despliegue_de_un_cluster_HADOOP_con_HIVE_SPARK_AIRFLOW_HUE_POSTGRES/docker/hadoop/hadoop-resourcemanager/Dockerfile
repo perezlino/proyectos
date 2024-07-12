@@ -1,5 +1,5 @@
 FROM hadoop-base:latest
-LABEL maintainer="MarcLamberti"
+LABEL maintainer="Alfonso Perez Lino"
 
 COPY start-resourcemanager.sh start-resourcemanager.sh
 

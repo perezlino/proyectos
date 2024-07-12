@@ -1,5 +1,5 @@
 FROM hadoop-base:latest
-LABEL maintainer="MarcLamberti"
+LABEL maintainer="Alfonso Perez Lino"
 
 ARG HIVE_VERSION
 ENV HIVE_VERSION=${HIVE_VERSION:-3.1.2}
