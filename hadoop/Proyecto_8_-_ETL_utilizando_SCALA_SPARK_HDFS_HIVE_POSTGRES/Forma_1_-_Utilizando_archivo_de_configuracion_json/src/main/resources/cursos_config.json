@@ -1,0 +1,15 @@
+{
+  "header": {
+    "creado_por": "futurex",
+    "fecha_creacion": "20240722"
+  },
+  "body": {
+    "pg_target_table": "sparkschema.tabla_cursos",
+    "reemplazar_valores_null": {
+      "id_curso": "NO",
+      "nombre_curso": "NO",
+      "nombre_autor": "SI",
+      "num_opiniones": "NO"
+    }
+  }
+}
