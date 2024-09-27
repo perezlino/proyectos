@@ -18,12 +18,12 @@ El proyecto consta de cinco archivos principales que gestionan la creación de l
 
 ### Proceso de Transformación
 
-- **De LANDING_TMP a LANDING**: Se realiza un proceso ETL que incluye la captura y binarización de los datos, junto con su compresión, asegurando que los datos estén optimizados para su posterior análisis.
-- **Capa UNIVERSAL**: Aquí, además de aplicar las reglas de calidad, se modelan los datos para que estén listos para ser utilizados por diversas soluciones analíticas.
+Crearemos 4 capas:
 
-### Capa de Soluciones (SMART)
-
-La capa **SMART** es donde se implementan las soluciones. En esta fase, puedes desarrollar desde informes hasta modelos de aprendizaje automático. Esta flexibilidad permite aprovechar al máximo los datos procesados y estructurados en el Data Lake.
+- **Paso 1.** Capturar los datos dentro de nuestro estorno de BIG DATA (`LANDING TEMP`)
+- **Paso 2.** Convertirlo a un formato de rápido procesamiento (binarizar los archivos) (`LANDING`)    
+- **Paso 3.** Modelamiento y Aplicación reglas de calidad: Transformación y almacenamiento (`UNIVERSAL`)
+- **Paso 4.** Procesamiento analítico avanzado y generación de insights (`SMART`)
 
 ### Despliegue del proyecto
 
@@ -184,9 +184,6 @@ spark-submit /usr/local/spark/deploy/deploy_script_spark.py
 ```
 Y eso eso es todo!. Hemos creado un `Data Lake` sobre **HDFS** el cual nos permitirá procesar multiples archivos utilizando **Hive** y **Spark**.
 
-```bash
-
-```
 
 ###  Crear reportes utilizando la tabla **TRANSACCION_ENRIQUECIDA** utilizando Jupyter Notebooks
 
