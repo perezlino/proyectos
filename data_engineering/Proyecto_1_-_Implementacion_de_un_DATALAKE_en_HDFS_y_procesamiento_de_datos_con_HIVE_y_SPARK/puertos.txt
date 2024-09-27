@@ -1,0 +1,18 @@
+32756: Historyserver
+32757: Resourcemanager
+32759: HiveServer ===> Metastore accesible a través de Thrift (usado en conexiones de clientes que requieren el protocolo Thrift)
+32760: HiveServer ===> HiveServer2 (para conexiones y ejecución de consultas)
+32761: HiveMetastore ===> Metastore accesible de forma estándar (puerto más comúnmente utilizado en configuraciones de Hive)
+32763: Namenode y Datanode
+32764: SparkWorker
+32765: SparkMaster ===> Spark Master (para conexiones de los workers y clientes)
+32766: SparkMaster ===> Spark Master Web UI
+32774: SparkMaster ===> Jupyter Notebook
+32767: Adminer
+32769: PostgreSQL
+
+ADMINER
+======== 
+Usuario: airflow
+Contraseña: airflow
+Motor base de datos: PostgreSQL
