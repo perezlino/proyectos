@@ -146,7 +146,7 @@ Ahora entramos a la tercera y última parte de nuestro proyecto, donde el requer
 A continuación, se presenta un diagrama de proceso que ilustra los pasos necesarios para obtener la tabla **TRANSACCION_ENRIQUECIDA**. Este diagrama detalla las etapas involucradas en el proceso de su construcción:
 
 <p align="center">
-  <img src="https://i.postimg.cc/nV2TFWS4/p369.png" alt="Descripción de la imagen">
+  <img src="https://i.ibb.co/pxcpfvL/p369.png" alt="Descripción de la imagen">
 </p>
 
 En la capa **UNIVERSAL** se creó la tabla **TRANSACCION_ENRIQUECIDA**, sin embargo, solo se hizo con fines educativos y desde Spark vamos a truncar dicha tabla y volver a construirla. Por tanto, para ello vamos a mover el script de despliegue en Spark desde nuestro entorno local al contenedor **spark-master**. Ubicate en el directorio raiz del proyecto y ejecuta el siguiente comando:
@@ -184,6 +184,7 @@ spark-submit /usr/local/spark/deploy/deploy_script_spark.py
 ```
 Y eso eso es todo!. Hemos creado un `Data Lake` sobre **HDFS** el cual nos permitirá procesar multiples archivos utilizando **Hive** y **Spark**.
 
+___
 
 ###  Crear reportes utilizando la tabla **TRANSACCION_ENRIQUECIDA** utilizando Jupyter Notebooks
 
