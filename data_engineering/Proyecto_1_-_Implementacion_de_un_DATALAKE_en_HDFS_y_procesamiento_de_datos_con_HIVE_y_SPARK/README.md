@@ -27,7 +27,7 @@ Crearemos 4 capas:
 
 ### Despliegue del proyecto
 
-Para comenzar, te recomiendo descargar todo el contenido en formato ZIP en tu entorno local. A continuación, utilizaremos la línea de comandos para iniciar nuestro ecosistema Hadoop y sus servicios. Ahora asegúrate de estar en la ruta donde se encuentra el archivo **docker-compose.yml** y ejecuta el siguiente comando:
+Antes de comenzar asegúrate de tener instalado Docker en tu computador. Teniendo listo eso, te recomiendo descargar todo el contenido en formato ZIP en tu entorno local. A continuación, utilizaremos la línea de comandos para iniciar nuestro ecosistema Hadoop y sus servicios. Ahora asegúrate de estar en la ruta donde se encuentra el archivo **docker-compose.yml** y ejecuta el siguiente comando:
 
 ```bash
 docker compose up
