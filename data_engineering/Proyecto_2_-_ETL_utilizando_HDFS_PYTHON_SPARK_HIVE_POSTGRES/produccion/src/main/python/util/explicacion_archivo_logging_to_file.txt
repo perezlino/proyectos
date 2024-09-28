@@ -1,0 +1,28 @@
+[loggers]
+keys=root, create_objects, ...  <----------- TENEMOS VARIOS LOGGERS. "root" será el archivo principal "run_presc_pipeline.py", 
+                                             "create_objects" será para el archivo "create_objects.py" y así para todos los otros loggers
+[handlers]
+keys=fileHandler   <--------- Podemos dar cualquier nombre
+
+[formatters]
+keys=fileFormatter   <--------- Podemos dar cualquier nombre
+
+[logger_root]   <-------------  El logger del archivo "root" tendrá el nivel "DEBUG"
+level=DEBUG
+handlers=fileHandler
+
+[logger_create_objects]   <-------------  El logger del archivo "customLogger" tendrá el nivel "DEBUG"
+level=DEBUG                               qualname: corresponde al nombre del logger
+handlers=fileHandler                      propagate=0 : Puede tomar el valor 0 o 1. Dejarlo en 0
+qualname=create_objects
+propagate=0
+
+[handler_fileHandler]  <------------ Configuramos el formato del mensaje logging
+class=FileHandler                       class=FileHandler : quiere decir que se manejera un archivo .log
+level=DEBUG                             args=('../logs/presc_run_pipeline.log','a') : este es el archivo .log que se creará y se irá agregando cada log con 'a'
+formatter=fileFormatter
+args=('../logs/presc_run_pipeline.log','a')
+
+[formatter_fileFormatter]
+format=%(asctime)s - %(name)s - %(levelname)s - %(message)s
+datefmt="%d-%b-%y %H:%M:%S"
