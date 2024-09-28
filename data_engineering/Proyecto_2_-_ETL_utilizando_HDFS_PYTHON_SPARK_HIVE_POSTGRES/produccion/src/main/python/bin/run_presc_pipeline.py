@@ -18,10 +18,13 @@ from presc_run_data_persist import data_persist_hive, data_persist_postgre
 logging.config.fileConfig(fname='../util/logging_to_file.conf')
 
 def main():
-   # Llamar a la función para crear la base de datos antes de continuar
-    create_database('prescpipeline')
+
     try:
         logging.info("main() se ha iniciado ...")
+
+        # Llamar a la función para crear la base de datos antes de continuar
+        create_database('prescpipeline')
+        
         ### Obtener el Spark Object
         spark = get_spark_object(gav.environ,gav.appName)
         # Validar el Spark Object

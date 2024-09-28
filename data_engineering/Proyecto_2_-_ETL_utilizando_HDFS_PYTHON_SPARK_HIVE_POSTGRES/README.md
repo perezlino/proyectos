@@ -11,12 +11,13 @@ Este proyecto implementa un pipeline de datos para procesar y analizar informaci
 - **Persistencia**: Almacenamiento de datos en Hive y PostgreSQL, asegurando que la información esté disponible para su análisis futuro.
 - **Manejo de Logs**: Registro de eventos y errores para facilitar el monitoreo y la depuración.
 
-### Requisitos
+### Tecnologias utilizadas
 
-- Python
-- Apache Spark
-- PostgreSQL
-- Hive
+- `Python`
+- `Apache Spark`
+- `Hive`
+- `PostgreSQL`
+- `HDFS`
 
 ### Estructura del Proyecto
 
@@ -71,20 +72,75 @@ Se solicitan 2 informes:
 
 ### Despliegue del proyecto
 
-Antes de comenzar asegúrate de tener instalado Docker en tu computador. Teniendo listo eso, te recomiendo descargar el directorio `docker` y el archivo `docker-compose.yml` a tu entorno local, ambos deben estar en la misma ruta. A continuación, utilizaremos la línea de comandos para iniciar nuestro ecosistema Hadoop y sus servicios. Ahora asegúrate de estar en la ruta donde se encuentra el archivo **docker-compose.yml** y ejecuta el siguiente comando:
-
+Antes de comenzar asegúrate de tener instalado Docker en tu computador. Teniendo listo eso, te recomiendo descargar todos los archivos de este proyecto en un mismo directorio de tu entorno local. A continuación, utilizaremos la línea de comandos para iniciar nuestro ecosistema Hadoop y sus servicios. Ahora asegúrate de estar en la ruta donde se encuentra el archivo **docker-compose.yml** y ejecuta el siguiente comando:
 ```bash
 docker compose up
 ```
-
+Después, agrega el directorio **produccion** a un archivo zip y mueve el archivo **produccion.zip** al contenedor **spark-master**:
+```bash
+docker cp produccion.zip spark-master:/
+```
 Ahora arrancamos el contenedor **spark-master**:
-
 ```bash
 docker exec -it spark-master bash
 ```
-
-Y ejecutamos el siguiente comando para desplegar el Proyecto:
-
+No es necesario instalar la herramienta **unzip** para descomprimir archivos, ya que, ya está configurada en el contenedor. Descomprimimos el archivo **produccion.zip**:
 ```bash
-./produccion/src/main/python/bin/deploy_proyecto_prescPipeline.ksh
+unzip produccion.zip
 ```
+Luego, otorgamos permisos de ejecución a la ruta `/produccion/src/main/python` con el siguiente comando:
+```bash
+chmod -R +x /produccion/src/main/python
+```
+Nos posicionamos en la ruta `/produccion/src/main/python/bin`:
+```bash
+cd /produccion/src/main/python/bin
+```
+Y finalizamos con el siguiente comando para desplegar el Proyecto:
+```bash
+./deploy_proyecto_prescPipeline.ksh
+```
+
+### Verificar resultados en HDFS
+
+Luego de ejecutarse nuestro pipeline, ejecutamos el siguiente comando para verificar que los datos fueron persistidos en HDFS:
+```bash
+hdfs dfs -ls /user/hive/warehouse/prescpipeline
+```
+Debiesemos ver algo similar a esto:
+```bash
+Found 2 items
+drwxr-xr-x   - root supergroup          0 2024-07-18 22:10 /user/hive/warehouse/prescpipeline/df_city_final
+drwxr-xr-x   - root supergroup          0 2024-07-18 22:11 /user/hive/warehouse/prescpipeline/df_presc_final
+```
+
+### Verificar resultados en PostgreSQL
+
+Por medio de linea de comandos podemos verificar que se hayan creado las 2 tablas que creamos en este proyecto. Abrimos una nueva consola y comenzamos arrancando el contenedor **postgres**:
+```bash
+docker exec -it postgres bash
+```
+Ejecutamos el siguiente comando para ingresar a la base de datos `postgres_db`
+```bash
+psql -U admin --dbname postgres_db
+```
+Indicamos que queremos utilizar la base de datos **prescpipeline**:
+```bash
+\c prescpipeline
+```
+Luego, visualizamos las tablas que se han creado:
+```bash
+prescpipeline=# \dt
+             List of relations
+ Schema |      Name      | Type  |  Owner
+--------+----------------+-------+---------
+ public | df_city_final  | table | airflow
+ public | df_presc_final | table | airflow
+(2 rows)
+
+```
+Y finalmente, consultamos las tablas para verificar que efectivamente tengan datos:
+```bash
+prescpipeline=# SELECT * FROM df_presc_final LIMIT 10;
+prescpipeline=# SELECT * FROM df_city_final LIMIT 10;
+``` 
