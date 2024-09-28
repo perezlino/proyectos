@@ -18,12 +18,12 @@ services:
     #volumes:
       #- ./mnt/postgres:/var/lib/postgresql/data/pgdata
     environment:
-      - POSTGRES_USER=airflow
-      - POSTGRES_PASSWORD=airflow
-      - POSTGRES_DB=airflow_db
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=postgres_db
       #- PGDATA=/var/lib/postgresql/data/pgdata
     healthcheck:
-      test: [ "CMD", "pg_isready", "-q", "-d", "airflow_db", "-U", "airflow" ]
+      test: [ "CMD", "pg_isready", "-q", "-d", "postgres_db", "-U", "admin" ]
       timeout: 45s
       interval: 10s
       retries: 10
