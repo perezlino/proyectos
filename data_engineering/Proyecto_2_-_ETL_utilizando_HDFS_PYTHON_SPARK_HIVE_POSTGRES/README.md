@@ -1,6 +1,6 @@
 # Proyecto de implementación de un pipeline para procesar y analizar información utilizando Python, Spark, PostgreSQL y Hive
 
-[![p372.png](https://i.postimg.cc/CLG9gN3C/p372.png)](https://postimg.cc/gn0gyvkr)
+[![p372.png](https://i.postimg.cc/nVRTWK4z/p372.png)](https://postimg.cc/rz4S0rYX)
 
 Este proyecto implementa un pipeline de datos para procesar y analizar información de prescriptores utilizando Apache Spark. A través de este pipeline, se lleva a cabo la ingestión, limpieza, transformación y persistencia de datos, permitiendo generar reportes útiles para la toma de decisiones.
 
@@ -9,7 +9,7 @@ Este proyecto implementa un pipeline de datos para procesar y analizar informaci
 - **Ingestión de Datos**: Carga de archivos desde HDFS en formatos CSV y Parquet.
 - **Validación de Datos**: Verificación de conteos y registros relevantes para asegurar la integridad de los datos cargados.
 - **Limpieza de Datos**: Transformaciones y limpiezas aplicadas a los DataFrames de ciudades y prescriptores.
-- **Transformación de Datos**: Generación de reportes sobre ciudades y los cinco principales prescriptores.
+- **Transformación de Datos**: Generación de Dataframes finales.
 - **Persistencia**: Almacenamiento de datos en Hive y PostgreSQL, asegurando que la información esté disponible para su análisis futuro.
 - **Manejo de Logs**: Registro de eventos y errores para facilitar el monitoreo y la depuración.
 
