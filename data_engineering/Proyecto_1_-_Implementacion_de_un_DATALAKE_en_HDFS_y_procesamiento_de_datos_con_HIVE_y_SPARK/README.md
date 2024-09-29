@@ -10,18 +10,9 @@ El proyecto consta de cinco archivos principales que gestionan la creación de l
 
 1. **`deploy_directorios.sh`**: Este script se ejecuta en el contenedor **namenode** y se encarga de crear la estructura de carpetas en HDFS. Además, gestiona el movimiento de los archivos necesarios hacia HDFS.
 2. **`deploy_esquema_landing_tmp.sql`**: Se ejecuta en el contenedor **hive-server** para desplegar el esquema de la capa **LANDING TMP** del Data Lake. Esta capa es crucial para la ingesta inicial de datos.
-3. **`deploy_esquema_landing.sql`**: También ejecutado en el contenedor **hive-server**, este archivo despliega el esquema de la capa **LANDING**. Aquí se realiza un proceso de ETL (Extracción, Transformación y Carga) que implica capturar y binarizar los datos, así como aplicar compresión.
-4. **`deploy_esquema_universal.sql`**: Este archivo despliega el esquema de la capa **UNIVERSAL** en el contenedor **hive-server**. En esta capa, se crea la tabla **`transaccion_enriquecida`**, la cual se construye utilizando las tablas **`persona`**, **`empresa`** y **`transaccion`**.
-5. **`Spark`**: Utilizamos Spark para procesar y enriquecer los datos en la tabla **`transaccion_enriquecida`**, aplicando reglas de calidad genéricas y preparándolos para su uso en soluciones analíticas.
+3. **`deploy_esquema_landing.sql`**: Este archivo se ejecuta en el contenedor **hive-server** y se encarga de desplegar el esquema de la capa **LANDING**. Su objetivo es recolectar los datos de la capa anterior y transformarlos en un formato que permita un procesamiento más ágil, lo que implica binarizar los datos y aplicar compresión. Para fines educativos, utilizamos el tipo de dato **AVRO** junto con la compresión **snappy**.
+4. **`deploy_esquema_universal.sql`**: Debemos ejecutar este archivo en el contenedor **hive-server**, donde se encargará de desplegar el esquema de la capa **UNIVERSAL**. En esta etapa, realizamos el modelado y aplicamos reglas de calidad, como la conversión de tipos de datos, el manejo de valores nulos y la limpieza de datos. Aquí se crea la tabla **`transaccion_enriquecida`**, que se construye a partir de las tablas **`persona`**, **`empresa`** y **`transaccion`**, utilizando **`Apache Spark`** para su procesamiento.
 
-### Proceso de Transformación
-
-Crearemos 4 capas:
-
-- **Paso 1.** Capturar los datos dentro de nuestro estorno de BIG DATA (`LANDING TEMP`)
-- **Paso 2.** Convertirlo a un formato de rápido procesamiento (binarizar los archivos) (`LANDING`)    
-- **Paso 3.** Modelamiento y Aplicación reglas de calidad: Transformación y almacenamiento (`UNIVERSAL`)
-- **Paso 4.** Procesamiento analítico avanzado y generación de insights (`SMART`)
 
 ### Despliegue del proyecto
 
@@ -145,7 +136,7 @@ A continuación, se presenta un diagrama de proceso que ilustra los pasos necesa
 
 [![p369.png](https://i.postimg.cc/nV2TFWS4/p369.png)](https://postimg.cc/w3tDFwpM)
 
-En la capa **UNIVERSAL** se creó la tabla **TRANSACCION_ENRIQUECIDA**, sin embargo, solo se hizo con fines educativos y desde Spark vamos a truncar dicha tabla y volver a construirla. Por tanto, para ello vamos a mover el script de despliegue en Spark desde nuestro entorno local al contenedor **spark-master**. Ubicate en el directorio raiz del proyecto y ejecuta el siguiente comando:
+En la capa **UNIVERSAL**, se creó la tabla **TRANSACCION_ENRIQUECIDA** utilizando **HiveSQL**, pero esto se realizó únicamente con fines educativos. Desde Spark, truncaremos esta tabla y la reconstruiremos. Para ello, moveremos el script de despliegue de Spark desde nuestro entorno local al contenedor **spark-master**. Asegúrate de estar en el directorio raíz del proyecto y ejecuta el siguiente comando:
 
 ```bash
 docker cp deploy_script_spark.py spark-master:/usr/local/spark/deploy
@@ -157,7 +148,7 @@ Ahora arrancamos el contenedor **spark-master**:
 docker exec -it spark-master bash
 ```
 
-Antes de finalizar el proyecto desplegando el script de spark por linea de comandos, podriamos confirmar si las propiedades que vamos a lanzar estan o no habilitadas. Esto podemos hacerlo desde la consola **pyspark**.  Ejecutamos el siguiente comando:
+Antes de finalizar el proyecto ejecutando el script de Spark por línea de comandos, podemos verificar si las propiedades que vamos a utilizar están habilitadas. Para ello, podemos hacerlo desde la consola **pyspark**. Simplemente ejecuta el siguiente comando:
 
 ```bash
 pyspark
@@ -173,7 +164,7 @@ spark.sql("SET hive.exec.dynamic.partition").show()
 spark.sql("SET hive.exec.dynamic.partition.mode").show()
 ```
 
-En caso de no estar habilitadas las debemos habilitar en nuestro script, dado que ambas propiedades nos permiten realizar particiones dinámicas en Hive a través de Spark. Finalmente, salimos de la consola **pyspark** y ejecutamos el script utilizando el siguiente comando:
+Si las propiedades no están habilitadas, debemos activarlas en nuestro script, ya que ambas permiten realizar particiones dinámicas en Hive a través de Spark. Finalmente, salimos de la consola **pyspark** y ejecutamos el script con el siguiente comando:
 
 ```bash
 spark-submit /usr/local/spark/deploy/deploy_script_spark.py
@@ -184,7 +175,7 @@ ___
 
 ###  Crear reportes utilizando la tabla **TRANSACCION_ENRIQUECIDA** utilizando Jupyter Notebooks
 
-Es importante instalar Jupyter en Docker (en el contenedor `spark-master`) e integrar Spark 3.* con Jupyter. En dicho contenedor ya fue agregado el puerto **32774:8888** para trabajar con Jupyter Notebooks. 
+Es fundamental instalar Jupyter en Docker (en el contenedor `spark-master`) e integrarlo con Spark 3.*. En este contenedor, ya se ha configurado el puerto **32774:8888** para trabajar con Jupyter Notebooks.
 
 Comencemos instalando actualizaciones dentro del contenedor:
 ```bash
