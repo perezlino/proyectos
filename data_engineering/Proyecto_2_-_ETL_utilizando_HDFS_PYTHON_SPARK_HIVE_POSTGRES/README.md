@@ -1,5 +1,7 @@
 # Proyecto de implementación de un pipeline para procesar y analizar información utilizando Python, Spark, PostgreSQL y Hive
 
+[![p372.png](https://i.postimg.cc/CLG9gN3C/p372.png)](https://postimg.cc/gn0gyvkr)
+
 Este proyecto implementa un pipeline de datos para procesar y analizar información de prescriptores utilizando Apache Spark. A través de este pipeline, se lleva a cabo la ingestión, limpieza, transformación y persistencia de datos, permitiendo generar reportes útiles para la toma de decisiones.
 
 ### Características
