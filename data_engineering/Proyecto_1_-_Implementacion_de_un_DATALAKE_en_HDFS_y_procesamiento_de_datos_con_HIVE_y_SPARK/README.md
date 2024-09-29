@@ -1,8 +1,6 @@
 # Proyecto de Implementación de un Data Lake en HDFS y posterior procesamiento de datos con Hive y Spark
 
-<p align="center">
-  <img src="https://i.postimg.cc/pV05D6zc/Screenshot-6.png" alt="Descripción de la imagen">
-</p>
+[![p371.png](https://i.postimg.cc/jqvHNJY6/p371.png)](https://postimg.cc/BtLPfb6t)
 
 Este proyecto se centra en la creación e implementación de un **Data Lake** utilizando **Hadoop Distributed File System (HDFS)**, junto con el procesamiento de datos mediante **Hive** y **Spark**. El objetivo es estructurar y transformar grandes volúmenes de datos para facilitar el análisis y la generación de informes.
 
