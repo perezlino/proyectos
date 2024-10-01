@@ -204,3 +204,12 @@ Para probar una tarea específica, debemos hacerlo dentro del contenedor **sched
 ```bash
 airflow tasks test <nombre_dag> <tarea> <una_fecha_en_formato_YYYY-mm-dd>
 ```
+
+Una vez que hayas ejecutado nuestro DAG en la interfaz de usuario de Airflow y si la ejecución ha sido exitosa, deberías ver un resultado similar al que se muestra en la imagen a continuación:
+
+[![p378.png](https://i.postimg.cc/65P9hSrN/p378.png)](https://postimg.cc/CzjThcrv)
+
+Y luego podemos revisar las tablas creadas en Postgres por medio de DBeaver:
+
+[![p379.png](https://i.postimg.cc/6QfJF1vq/p379.png)](https://postimg.cc/wtMGm2FY)
+[![p380.png](https://i.postimg.cc/fLWnsjcK/p380.png)](https://postimg.cc/NynP7XP9)

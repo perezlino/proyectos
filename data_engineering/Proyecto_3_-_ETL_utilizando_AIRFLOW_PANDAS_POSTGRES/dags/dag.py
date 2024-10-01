@@ -13,12 +13,12 @@ import pandas as pd
 
 TZ = pytz.timezone('America/Bogota')
 TODAY = datetime.now(TZ).strftime('%Y-%m-%d')
-URL = 'https://raw.githubusercontent.com/perezlino/proyectos/data_engineering/Proyecto_3_-_ETL_utilizando_AIRFLOW_PANDAS_POSTGRES/titanic.csv'
+URL = 'https://raw.githubusercontent.com/perezlino/proyectos/main/data_engineering/Proyecto_3_-_ETL_utilizando_AIRFLOW_PANDAS_POSTGRES/titanic.csv'
 PATH = '/opt/airflow/dags/data/titanic.csv'
 OUTPUT_DQ = '/opt/airflow/dags/data/data_quality_report_{}.html'.format(TODAY)
 OUTPUT_SQL = '/opt/airflow/dags/sql/titanic_{}.sql'.format(TODAY)
 OUTPUT = '/opt/airflow/dags/data/titanic_curated_{}.csv'.format(TODAY)
-TARGET = '/opt/airflow/dags/sql/titanic_{}.sql'.format(TODAY)
+TARGET = 'sql/titanic_{}.sql'.format(TODAY)
 
 DEFAULT_ARGS = {
     'owner': 'Alfonso Perez',
@@ -95,8 +95,8 @@ with DAG(
     description =  'Ejecucion Data Pipeline',
     default_args = DEFAULT_ARGS,
     catchup = False,
-    start_date= datetime (2023,1,1), 
-    schedule = '@once', 
+    start_date= datetime (2024,10,1), 
+    schedule_interval = '@once', 
     tags = ['data engineering']
 
 ) as dag:
@@ -124,7 +124,7 @@ with DAG(
         profiling >> curated
 
     with TaskGroup("RawLayer", tooltip="Capa Raw") as raw_layer:
-        create_raw = PostgresOperator( 
+        create_raw = PostgresOperator(
             task_id = 'create_raw',
             postgres_conn_id = 'postgres_docker',
             sql = """
@@ -144,8 +144,8 @@ with DAG(
             """
         )
 
-        load_raw = PostgresOperator( 
-            task_id='load raw',
+        load_raw = PostgresOperator(
+            task_id = 'load_raw',
             postgres_conn_id = 'postgres_docker',
             sql = TARGET
         ) 
@@ -169,15 +169,15 @@ with DAG(
                     padr_hij VARCHAR(10),
                     prec_bol VARCHAR(10), 
                     pto_e VARCHAR(20),
-                    load_date VARCHAR(10)
+                    load_date VARCHAR(10),
                     load_datetime TIMESTAMP
                 )
             """
         )
     
         carga_master = PostgresOperator(
-            task_id =  'carga_master',
-            postgres_conn_id ='postgres_docker',
+            task_id = 'carga_master',
+            postgres_conn_id = 'postgres_docker',
             sql = """
             INSERT INTO master_titanic(
                 id, full_name, title, survived, age, generacion,
