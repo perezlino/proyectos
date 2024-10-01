@@ -1,6 +1,6 @@
 # Data Pipeline para el Análisis del Titanic utilizando Airflow, Pandas y PostgreSQL
 
-[![p372.png](https://i.postimg.cc/nVRTWK4z/p372.png)](https://postimg.cc/rz4S0rYX)
+[![p377.png](https://i.postimg.cc/jSh72RVh/p377.png)](https://postimg.cc/RWNFb5Z3)
 
 Este proyecto implementa un pipeline de datos utilizando Apache Airflow para procesar un conjunto de datos sobre los pasajeros del Titanic. El pipeline realiza las siguientes tareas:
 
