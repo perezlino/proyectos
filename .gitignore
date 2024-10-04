@@ -1,0 +1,16 @@
+# Ignorar archivos de compilación
+#*.class
+#*.jar
+
+# Ignorar archivos de Python compilados
+__pycache__/
+
+# Ignorar archivos de apuntes privados
+/conceptos_big_data
+/data_engineering/Proyecto_2_-_ETL_utilizando_HDFS_PYTHON_SPARK_HIVE_POSTGRES/apuntes
+/data_engineering/Proyecto_3_-_ETL_utilizando_AIRFLOW_PANDAS_POSTGRES/apuntes
+/data_engineering/Proyecto_5_-_ETL_utilizando_AIRFLOW_HDFS_SPARK_HIVE/apuntes
+/data_engineering/Proyecto_7_-_ETL_utilizando_AIRFLOW_PANDAS_POSTGRES/apuntes
+/proyectos_privados
+/scrapy_projects
+/venv
