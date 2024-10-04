@@ -241,3 +241,8 @@ df = spark.createDataFrame(data, columns)
 df.show()
 ```
 Y asi luego podemos ejecutar los reportes propuestos en el notebook **notebook_reportes.ipynb** sobre la tabla **TRANSACCION_ENRIQUECIDA**.
+
+Para detener y eliminar todos los contenedores a la vez:
+```bash
+docker-compose down
+```
