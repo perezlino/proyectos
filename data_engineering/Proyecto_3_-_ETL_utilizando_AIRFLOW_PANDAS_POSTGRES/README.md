@@ -213,3 +213,8 @@ Y luego podemos revisar las tablas creadas en Postgres por medio de DBeaver:
 
 [![p379.png](https://i.postimg.cc/6QfJF1vq/p379.png)](https://postimg.cc/wtMGm2FY)
 [![p380.png](https://i.postimg.cc/fLWnsjcK/p380.png)](https://postimg.cc/NynP7XP9)
+
+Para detener y eliminar todos los contenedores a la vez:
+```bash
+docker-compose down
+```
