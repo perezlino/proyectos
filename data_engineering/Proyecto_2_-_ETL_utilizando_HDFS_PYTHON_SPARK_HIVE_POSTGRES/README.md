@@ -146,3 +146,8 @@ Y finalmente, consultamos las tablas para verificar que efectivamente tengan dat
 prescpipeline=# SELECT * FROM df_presc_final LIMIT 10;
 prescpipeline=# SELECT * FROM df_city_final LIMIT 10;
 ``` 
+
+Para detener y eliminar todos los contenedores a la vez:
+```bash
+docker-compose down
+```
