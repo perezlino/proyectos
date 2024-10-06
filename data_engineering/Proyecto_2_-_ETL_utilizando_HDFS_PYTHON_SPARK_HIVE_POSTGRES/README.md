@@ -47,7 +47,7 @@ Estos scripts de shell facilitan la gestión de archivos y directorios en HDFS:
 - **`eliminar_rutas_output_hdfs.ksh`**: Elimina los directorios "output" y las tablas finales de Hive (subdirectorios en el directorio de la base de datos) que se encuentran en HDFS. Esto con el fin de que al momento de volver a desplegar el pipeline no existan conflictos con estos directorios.
 - **`copiar_archivos_en_hdfs_a_local.ksh`**: Borra los archivos en las rutas locales si existen y luego copia archivos desde HDFS hacia el entorno local.
 
-### Despliegue del Proyecto
+### Ejecución del Proyecto
 
 - **`deploy_proyecto_prescPipeline.ksh`**: **Despliega todo el proyecto** en el entorno correspondiente. Este archivo se utiliza exclusivamente para el despliegue general del proyecto y no está destinado a la gestión de directorios y archivos.
 
