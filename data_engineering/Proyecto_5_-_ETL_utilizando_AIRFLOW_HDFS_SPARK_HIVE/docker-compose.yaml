@@ -215,8 +215,9 @@ services:
           max-file: "5"
           max-size: "10m"
     ports:
-      - "8082:8082"
-      - "7077:7077"
+      - "32766:8082"  # Port for the Spark master UI
+      - "32765:7077"  # Port for Spark master (for cluster manager)
+      - "4040:4040"   # Port for the Spark application UI
     volumes:
       - ./mnt/spark/apps:/opt/spark-apps
       - ./mnt/spark/data:/opt/spark-data
@@ -230,7 +231,7 @@ services:
     build: ./docker/spark/spark-worker
     restart: always
     container_name: spark-worker
-    hostname: spark-worker  
+    hostname: spark-worker    
     logging:
       driver: "json-file"
       options:
@@ -239,7 +240,8 @@ services:
     depends_on:
       - spark-master
     ports:
-      - "32764:8081"
+      - "32764:8081"  # Port for Spark worker UI
+      - "4041:4040"   # Port for the Spark application UI (for worker)
     volumes:
       - ./mnt/spark/apps:/opt/spark-apps
       - ./mnt/spark/data:/opt/spark-data
