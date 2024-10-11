@@ -11,7 +11,7 @@ from pandas_profiling import ProfileReport
 import pytz
 import pandas as pd
 
-TZ = pytz.timezone('America/Bogota')
+TZ = pytz.timezone('America/Santiago')
 TODAY = datetime.now(TZ).strftime('%Y-%m-%d')
 URL = 'https://raw.githubusercontent.com/perezlino/proyectos/main/data_engineering/Proyecto_3_-_ETL_utilizando_AIRFLOW_PANDAS_POSTGRES/titanic.csv'
 PATH = '/opt/airflow/dags/data/titanic.csv'
