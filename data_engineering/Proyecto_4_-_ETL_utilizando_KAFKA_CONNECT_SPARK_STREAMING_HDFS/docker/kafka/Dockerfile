@@ -11,13 +11,13 @@ RUN apt-get update -yqq && \
     mv /opt/kafka_2.12-2.5.0 /opt/kafka
 	
 # Crear el directorio para el kernel de PySpark
-RUN mkdir -p /usr/local/share/jupyter/kernels/pyspark2
+RUN mkdir -p /usr/local/share/jupyter/kernels/pyspark3
 
 # Copiar el archivo kernel.json al directorio correspondiente
-COPY kernel.json /usr/local/share/jupyter/kernels/pyspark2/
+COPY kernel.json /usr/local/share/jupyter/kernels/pyspark3/
 
 # Instalar el kernel
-RUN jupyter kernelspec install /usr/local/share/jupyter/kernels/pyspark2 --user
+RUN jupyter kernelspec install /usr/local/share/jupyter/kernels/pyspark3 --user
 
 # Copiar scripts de inicio y detención a /opt/kafka/bin
 COPY ./start-kafka.sh ./
