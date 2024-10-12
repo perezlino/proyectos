@@ -2,12 +2,47 @@
 
 [![p471.png](https://i.postimg.cc/02b90xJ9/p471.png)](https://postimg.cc/Tpv8Tz9s)
 
+Este proyecto se centra en la implementación de un Data Lake utilizando Databricks, con el objetivo de almacenar, procesar y analizar datos de Fórmula 1 de manera eficiente y escalable. A través de una serie de pasos meticulosamente planificados, se ha creado un entorno robusto que permite a los analistas y científicos de datos acceder a información valiosa y realizar análisis en tiempo real.
 
-## Paso 1: Integración con ADLS
+## **Paso 1: Integración con Azure Data Lake Storage (ADLS)**
+
+El primer paso consiste en la integración de Azure con Databricks. Esto incluye la configuración de un Azure Active Directory (AAD) Service Principal, que facilita la autenticación y el acceso seguro a ADLS. También se crea un Azure Key Vault para gestionar de forma segura las credenciales necesarias para acceder a los datos.
+
+### Pasos Incluidos:
+- Creación de un Service Principal en Azure para la autenticación.
+- Configuración de un Key Vault para almacenar y gestionar secretos.
+- Asignación de permisos adecuados para el Service Principal en Azure.
+- Creación de un Secret Scope en Databricks para acceder a los secretos de forma segura.
+
+## **Paso 2: Ingestión de Datos en el Data Lake**
+
+Una vez configurada la integración, se procede a la ingesta de datos en el Data Lake. Se crean las bases de datos necesarias para organizar los datos crudos y procesados. A través de la carga manual de archivos desde ADLS, los datos se transforman y almacenan en formato Parquet, optimizando el espacio y el rendimiento.
+
+### Pasos Incluidos:
+- Creación de las bases de datos `f1_raw` y `f1_processed` en el Data Lake.
+- Ingesta de archivos en diferentes formatos (CSV y JSON) desde ADLS.
+- Aplicación de transformaciones a los datos para asegurar su calidad y consistencia.
+
+## **Paso 3: Transformación de Datos**
+
+En esta etapa, se realizan diversas transformaciones sobre los datos almacenados en el Data Lake. Se renombran columnas, se aplican funciones de unión y se utilizan agregaciones para generar nuevos conjuntos de datos que faciliten el análisis. También se implementan funciones de ventana para obtener métricas adicionales.
+
+### Pasos Incluidos:
+- Creación de la base de datos `f1_presentation` para almacenar los resultados finales del análisis.
+- Transformación de datos utilizando técnicas avanzadas de SQL.
+- Generación de archivos Parquet con los resultados procesados, listos para su análisis.
+
+## **Paso 4: Análisis de Datos**
+
+Finalmente, se establece la capa de **presentation**, que permite a los analistas y científicos de datos realizar consultas SQL y acceder a insights significativos de los datos almacenados en el Data Lake. Esta capa está diseñada para ser intuitiva, mejorando la eficiencia en el análisis y la generación de informes.
+
+## Despliegue del Proyecto
+
+### Paso 1: Integración con ADLS
 
 Integrar Azure con Databricks implica varios pasos, desde la creación de un Azure Active Directory (AAD) Service Principal hasta la configuración de Databricks. Te muestro el paso a paso:
 
-### a) Crear un Azure Active Directory (AAD) Service Principal
+#### a) Crear un Azure Active Directory (AAD) Service Principal
 
 1.- **Iniciar sesión en Azure Portal**:
    - Ve a [Azure Portal](https://portal.azure.com/) e inicia sesión con tu cuenta de Azure.
@@ -30,7 +65,7 @@ Integrar Azure con Databricks implica varios pasos, desde la creación de un Azu
      - Haz clic en **Add**.
    - Copia el valor del secreto que aparece; lo necesitarás más adelante.
 
-### b) Crear un Azure Key Vault
+#### b) Crear un Azure Key Vault
 
 1.- **Crear un Key Vault**:
    - En el portal de Azure, selecciona **Create a resource**.
@@ -56,7 +91,7 @@ Integrar Azure con Databricks implica varios pasos, desde la creación de un Azu
    - Busca **Vault URI** y copialo.
    - Busca **Resource ID** y copialo.
 
-### c) Asignar permisos al Service Principal
+#### c) Asignar permisos al Service Principal
 
 1.- **Acceder a tu suscripción de Azure**:
    - Ve a **Subscriptions** en el portal de Azure.
@@ -69,7 +104,7 @@ Integrar Azure con Databricks implica varios pasos, desde la creación de un Azu
    - En **Assign access to**, selecciona **Azure AD user, group, or service principal**.
    - Busca tu Service Principal, selecciónalo y haz clic en **Save**.
 
-### d) Crear un Secret Scope en Databricks
+#### d) Crear un Secret Scope en Databricks
 
 1.- **Acceder al workspace de Databricks**:
    - Inicia sesión en tu workspace de Databricks.
@@ -92,7 +127,7 @@ Integrar Azure con Databricks implica varios pasos, desde la creación de un Azu
 4.- **Crear el Secret Scope**:
    - Haz clic en **Create** para finalizar la creación del Secret Scope.
 
-### e) Acceder a los secretos en Databricks
+#### e) Acceder a los secretos en Databricks
 
 1.- **Utilizar los secretos en un notebook**:
    - En un notebook, puedes acceder a los secretos utilizando el siguiente código:
@@ -105,17 +140,17 @@ Integrar Azure con Databricks implica varios pasos, desde la creación de un Azu
    - **scope**: Corresponde al nombre de tu Databricks Secret Scope
    - **key**: Corresponde al nombre del secreto que le diste al `ClienteID`, `TenantID` y `ClientSecret` en Azure Key Vault.
 
-### f) Probar la integración
+#### f) Probar la integración
 
 1.- **Realizar una prueba**:
    - Ejecuta un comando en tu notebook que requiera acceso a recursos de Azure, utilizando los secretos que has recuperado.
 
-### Consideraciones adicionales
+#### Consideraciones adicionales
 
 - Asegúrate de que el Service Principal tenga acceso al Key Vault configurado.
 - Utilizar Databricks Scoped Secrets es una excelente manera de manejar credenciales de forma segura.
 
-## Paso 2: Ingestión
+### Paso 2: Ingestión
 
 1. **Crear bases de datos**: Comienza el proceso estableciendo la base de datos `f1_raw`, que servirá para almacenar los datos en bruto. Luego, crea la base de datos `f1_processed`, que será el destino para los datos ingeridos durante el proceso de transformación. 
 
@@ -125,7 +160,7 @@ Integrar Azure con Databricks implica varios pasos, desde la creación de un Azu
 
 3. **Procesar y guardar resultados**: Aplicar transformaciones a los archivos ingeridos y guardar los resultados en la base de datos `f1_processed`, que servirá como fuente para el siguiente paso del proceso.
 
-### a) Crear base de datos
+#### a) Crear base de datos
 
 La base de datos **f1_raw** se creará en la ruta `/mnt/formula1dl/raw`. Es importante mencionar que al momento de crear la base de datos la ruta `/mnt/formula1dl/raw` se crea automaticamente.
 ```sql
@@ -139,7 +174,7 @@ CREATE DATABASE IF NOT EXISTS f1_processed
 LOCATION "/mnt/formula1dl/processed"
 ```
 
-### b) Carga de archivos hacia la ruta de ingesta: 
+#### b) Carga de archivos hacia la ruta de ingesta: 
 
 En Databricks, cuando utilizas la interfaz de usuario para cargar archivos, a menudo se limita la ubicación de destino a directorios predeterminados, como `/FileStore/tables/`. Sin embargo, si deseas cargar archivos directamente a una ubicación específica como `/mnt`, puedes hacerlo a través de otros métodos. Aquí tienes cómo hacerlo:
 
@@ -165,9 +200,9 @@ dbutils.fs.cp("dbfs:/FileStore/tables/qualifying_split_1.json", "dbfs:/mnt/formu
 dbutils.fs.cp("dbfs:/FileStore/tables/qualifying_split_2.json", "dbfs:/mnt/formula1dl/raw/qualifying/qualifying_split_2.json")
 ```
 
-### c) Detalles de la Ingesta de Archivos
+#### c) Detalles de la Ingesta de Archivos
 
-#### Ingesta del archivo "circuits.csv"
+##### Ingesta del archivo "circuits.csv"
 
 1. Leer el archivo
 2. Seleccionar solo las columnas que necesitamos
@@ -177,7 +212,7 @@ dbutils.fs.cp("dbfs:/FileStore/tables/qualifying_split_2.json", "dbfs:/mnt/formu
 
 <center><img src="https://i.postimg.cc/B6dF4Thd/db58.png"></center>
 
-#### Ingesta del archivo "races.csv"
+##### Ingesta del archivo "races.csv"
 
 1. Leer el archivo
 2. Añadir las columnas *ingestion_date* y *race_timestamp*
@@ -186,7 +221,7 @@ dbutils.fs.cp("dbfs:/FileStore/tables/qualifying_split_2.json", "dbfs:/mnt/formu
 
 <center><img src="https://i.postimg.cc/PqNskYvb/db59.png"></center>
 
-#### Ingesta del archivo "constructors.json"
+##### Ingesta del archivo "constructors.json"
 
 1. Leer el archivo
 2. Eliminar columnas no deseadas
@@ -195,7 +230,7 @@ dbutils.fs.cp("dbfs:/FileStore/tables/qualifying_split_2.json", "dbfs:/mnt/formu
 
 <center><img src="https://images2.imgbox.com/44/b5/oUpevSA8_o.png"></center> <!--db62-->
 
-#### Ingesta del archivo "drivers.json"
+##### Ingesta del archivo "drivers.json"
 
 1. Leer el archivo
 2. Renombrar columnas y añadir nuevas columnas
@@ -204,7 +239,7 @@ dbutils.fs.cp("dbfs:/FileStore/tables/qualifying_split_2.json", "dbfs:/mnt/formu
 
 <center><img src="https://images2.imgbox.com/e4/f7/eGqClVvp_o.png"></center> <!--db63-->
 
-#### Ingesta del archivo "results.json"
+##### Ingesta del archivo "results.json"
 
 1. Leer el archivo
 2. Renombrar columnas y añadir nuevas columnas
@@ -213,7 +248,7 @@ dbutils.fs.cp("dbfs:/FileStore/tables/qualifying_split_2.json", "dbfs:/mnt/formu
 
 <center><img src="https://images2.imgbox.com/bd/ee/T5xzXTnY_o.png"></center> <!--db64-->
 
-#### Ingesta del archivo "pit_stops.json"
+##### Ingesta del archivo "pit_stops.json"
 
 1. Leer el archivo
 2. Renombrar columnas y añadir nuevas columnas
@@ -221,7 +256,7 @@ dbutils.fs.cp("dbfs:/FileStore/tables/qualifying_split_2.json", "dbfs:/mnt/formu
 
 <center><img src="https://i.postimg.cc/dV8W94f3/db65.png"></center>
 
-#### Ingesta de los archivos "lap_times_split.csv"
+##### Ingesta de los archivos "lap_times_split.csv"
 
 1. Leer el directorio **lap_times** el cual contiene multiples archivos CSV
 2. Renombrar columnas y añadir nuevas columnas
@@ -229,7 +264,7 @@ dbutils.fs.cp("dbfs:/FileStore/tables/qualifying_split_2.json", "dbfs:/mnt/formu
 
 <center><img src="https://i.postimg.cc/ZntjGQ01/db66.png"></center>
 
-#### Ingesta de los archivos "qualifying_split.json"
+##### Ingesta de los archivos "qualifying_split.json"
 
 1. Leer el directorio **qualifying** el cual contiene multiples archivos Multi Line JSON
 2. Renombrar columnas y añadir nuevas columnas
@@ -237,11 +272,11 @@ dbutils.fs.cp("dbfs:/FileStore/tables/qualifying_split_2.json", "dbfs:/mnt/formu
 
 <center><img src="https://i.postimg.cc/pV94qxzr/db67.png"></center>
 
-### d) Ejecución de Todos los Notebooks
+#### d) Ejecución de Todos los Notebooks
 
 Para ejecutar todos los notebooks de manera eficiente, inicia el notebook `1_ingestar`. Esto permitirá que se lleve a cabo la ejecución en cadena de todos los notebooks asociados en un solo paso.
 
-## **Paso 3 - Transformación de Datos**
+### **Paso 3 - Transformación de Datos**
 
 1. **Crear bases de datos**: La base de datos `f1_presentation` almacenará los resultados finales, actuando como repositorio para consultas y análisis de datos posteriores.
 
@@ -265,7 +300,7 @@ LOCATION "/mnt/formula1dl/presentation"
 
 5. También emplearemos las funciones **Window** para transformar los datos basándonos en los resultados obtenidos en el paso 2  y generar un nuevo resultado en un archivo **parquet**.
 
-## **Paso 4 - Análisis de Datos**
+### **Paso 4 - Análisis de Datos**
 
 En este paso, hemos establecido la capa de **presentation**, diseñada específicamente para el análisis de datos. Esta capa servirá como un recurso fundamental para analistas y científicos de datos, permitiéndoles acceder a la información de manera eficiente y efectiva.
 
