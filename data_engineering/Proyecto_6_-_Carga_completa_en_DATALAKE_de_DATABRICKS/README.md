@@ -2,7 +2,7 @@
 
 [![p471.png](https://i.postimg.cc/02b90xJ9/p471.png)](https://postimg.cc/Tpv8Tz9s)
 
-Este proyecto se centra en la implementación de un Data Lake utilizando Databricks, con el objetivo de almacenar, procesar y analizar datos de Fórmula 1. En nuestro diseño, recopilamos todos los datos del contenedor **raw**, los procesamos y actualizamos tanto el contenedor **processed** como el contenedor **presentation** en cada iteración. Esta arquitectura, que llamamos **Full Load**, es sencilla y resulta eficiente para gestionar pequeñas cantidades de datos.
+Este proyecto se centra en la implementación de un Data Lake utilizando Databricks, con el objetivo de almacenar, procesar y analizar datos de Fórmula 1. En nuestro diseño, recopilamos todos los datos del contenedor **raw**, los procesamos y actualizamos tanto el contenedor **processed** como el contenedor **presentation** en cada iteración. Esta arquitectura, que llamamos **Full Load**, es sencilla y resulta eficiente para gestionar pequeñas cantidades de datos. El proceso de **Ingesta** permite añadir tanto nuevos datos como datos ya existentes al Data Lake, evitando duplicados a través de un mecanismo de sobreescritura (override). Este enfoque elimina los datos existentes y reemplaza la información anterior con los nuevos registros. De manera similar, se aplica un enfoque equivalente durante el proceso de **Transformación**.
 
 ## **Paso 1: Integración con Azure Data Lake Storage (ADLS)**
 
