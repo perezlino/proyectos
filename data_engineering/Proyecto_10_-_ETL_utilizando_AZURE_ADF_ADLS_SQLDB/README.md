@@ -1,6 +1,6 @@
 # Proyecto de ingesta y carga de datos desde Azure Datalake Storage hacia Azure SQL Database utilizando Azure Data Factory
 
-<center><img src="https://i.postimg.cc/g0DZL4kX/adf663.png"></center>
+[![p726.png](https://i.postimg.cc/Znd7207d/p726.png)](https://postimg.cc/QKjJWNr8)
 
 Este proyecto tiene como objetivo implementar un flujo completo de ingesta y carga de datos utilizando Azure Data Lake Storage (ADLS) y Azure Data Factory. Se centra en la ingesta de archivos CSV almacenados en un repositorio de GitHub, su transformación en formato JSON y su carga en una base de datos SQL en Azure.
 
