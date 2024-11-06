@@ -1,0 +1,22 @@
+[
+    {
+        "sourceBaseURL":"https://github.com",
+        "sourceRelativeURL":"perezlino/data_fake/raw/main/adf2/cases_deaths.csv",
+        "sinkFileName":"cases_deaths.csv"
+    },
+    {
+        "sourceBaseURL":"https://github.com",
+        "sourceRelativeURL":"perezlino/data_fake/raw/main/adf2/hospital_admissions.csv",
+        "sinkFileName":"hospital_admissions.csv"
+    },
+    {
+        "sourceBaseURL":"https://github.com",
+        "sourceRelativeURL":"perezlino/data_fake/raw/main/adf2/testing.csv",
+        "sinkFileName":"testing.csv"
+    },
+    {
+        "sourceBaseURL":"https://github.com",
+        "sourceRelativeURL":"perezlino/data_fake/raw/main/adf2/country_response.csv",
+        "sinkFileName":"country_response.csv"
+    }
+]
