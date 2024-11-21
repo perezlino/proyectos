@@ -1,24 +1,13 @@
-# Proyecto de Orquestación de Ingesta, Transformación y Carga de Datos con Azure Data Factory
+# Proyecto en desarrollo
 
-[![p1098.png](https://i.postimg.cc/sfJm04kk/p1098.png)](https://postimg.cc/Wth0dgb8)
+[![p1257.png](https://i.postimg.cc/prVpjcSR/p1257.png)](https://postimg.cc/YGVrKRks)
 
-Este proyecto tiene como objetivo crear un flujo completo de **orquestación de datos** utilizando **Azure Data Factory (ADF)**, con actividades que abarcan desde la ingestión de datos hasta su transformación y carga en una base de datos, todo automatizado y coordinado mediante pipelines.
-
-El proceso está dividido en varios pasos clave, que incluyen la creación de recursos de almacenamiento en **Azure Data Lake Storage (ADLS)** y **Azure Blob Storage (ABS)**, la configuración de bases de datos en **Azure SQL Database**, y la implementación de actividades de ingesta, transformación y carga de datos. Además, se contempla la automatización del flujo de trabajo mediante un pipeline de orquestación para gestionar la secuencia y dependencia de las actividades.
-
-## Pasos principales del proyecto:
-
-1. **Despliegue de Recursos en Azure**: Creación de cuentas de almacenamiento ADLS y ABS, configuración de bases de datos SQL y recursos de Azure Data Factory (ADF).
-2. **Ingesta de Datos**: Extracción de datos desde diversas fuentes (HTTP, Blob Storage) hacia Azure Data Lake Storage, con pipelines parametrizados.
-3. **Transformación de Datos**: Implementación de **Data Flows** para limpiar, enriquecer y transformar los datos.
-4. **Carga de Datos**: Procesamiento final de los datos y carga en bases de datos SQL para su posterior análisis.
-5. **Orquestación de Pipelines**: Coordinación y ejecución secuencial de pipelines de ingesta y transformación a través de Azure Data Factory.
 
 ## Despliegue del Proyecto
 
-### Paso 1: Creación de cuentas de almacenamiento ADLS y ABS
+### Paso 1: Creación ADLS "adlsproyectos" y contenedores
 
-Para comenzar, es esencial crear una cuenta de almacenamiento configurada para Azure Data Lake Storage (ADLS) y nombrarla `adlsproyectos`. Además, se debe crear otra cuenta de almacenamiento para Azure Blob Storage (ABS), que se llamará `absproyectos`. Una vez completadas estas configuraciones, procederemos a crear un contenedor en Azure Data Lake Storage llamado `raw` y un contenedor en Azure Blob Storage denominado `population`. A continuación, se presentan los pasos necesarios para llevar a cabo este proceso:
+Para comenzar, es esencial crear una cuenta de almacenamiento configurada para Azure Data Lake Storage (ADLS) y nombrarla `adlsproyectos`. Una vez completado esta configuración, procederemos a crear cuatro contenedores en Azure Data Lake Storage llamados `proyectosasa`, `raw`, `refined` y `processed`. A continuación, se presentan los pasos necesarios para llevar a cabo este proceso:
 
 ##### 1.1 Iniciar sesión en Azure
 1. Ve al [Portal de Azure](https://portal.azure.com).
@@ -111,103 +100,20 @@ Pasemos a la siguiente sección, **Networking**. No vamos a crear ninguna red ad
 
 ### **Paso 3: Data Ingestion**
 
-- Pasos a seguir en nuestra Ingesta de datos
+##### 3.1 Carga de datos
 
-    *   Crear Linked Services de origen y destino
-    *   Crear datasets de origen y destino
-    *   Crear un Pipeline de ingesta de datos  
+1. Carga de datos en el contenedor `raw` ubicado en el Azure Data Lake `adlsproyectos`
 
-[![p748.png](https://i.postimg.cc/nzpD9GPz/p748.png)](https://postimg.cc/wt4vSLH8)
 
-- Pasos a seguir en nuestra Ingesta de datos desde HTTP hacia Azure Data Lake Storage Gen2
+### **Paso 4: Data Exploration**
 
-    *   Reutilizaremos contenedor en ADLS donde almacenar la data
-    *   Crear un Linked Service de origen y reutilizar el Linked Service de destino
-    *   Crear datasets parametrizados tanto de origen como destino 
-    *   Crear un Pipeline de ingesta de datos parametrizado    
+##### 4.1 Exploración inicial de datos y creación de una EXTERNAL TABLE
 
-[![p859.png](https://i.postimg.cc/j24MhywM/p859.png)](https://postimg.cc/YLjNrGxF)
- 
-##### 4.1 Creación de Linked Services de origen y destino
+1. Exploración inicial del archivo `Unemployment.csv` y creación de una **EXTERNAL TABLE** en el contenedor `refined`
 
-1. Crear el Linked Service de origen **ls_ablob_covidreportingsa** que hace referencia a Azure Blob Storage
-2. Crear el Linked Service de destino **ls_adls_covidreportingdl** que hace referencia a nuestro ADLS
-
-##### 4.2 Creación de Datasets de origen y destino
-
-1. Crear el Dataset de origen **ds_population_raw_gz** que hace referencia al archivo **population_by_age.tsv.gz** alojado en el contenedor **population** en Azure Blob Storage
-
-2. Crear el Dataset de destino **ds_population_raw_tsv** que hace referencia al archivo **population_by_age.tsv** (que aún no existe, pero se creará de manera automática al ejecutar el pipeline) a nuestro ADLS, a la ruta **raw/population**. Siendo **raw** el contenedor y **population** el directorio
-
-##### 4.3 Creación de un Pipeline para la ingesta de datos
-
-1. Crear el Pipeline de ingesta de datos **pl_ingest_population_data** desde Azure Blob Storage hacia Azure Data Lake Storage Gen2, el cual contendrá una actividad **Copy data**
-
-##### 4.4 Creación de Linked Service de origen
-
-1. Crear el Linked Service de origen **ls_http_opendata_ecdc_europa_eu** que hace referencia a HTTP
-
-##### 4.5 Creación de Datasets de origen y destino parametrizados
-
-1. Crear el Dataset de origen **ds_ecdc_raw_csv_http** que hace referencia al archivo parametrizado **@dataset().relativeURL**. Dicho valor del parámetro será indicado al momento de ejecutar el pipeline
-
-2. Crear el Dataset de destino **ds_ecdc_raw_csv_dl** que hace referencia al archivo parametrizado **@dataset().fileName** (que aún no existe, pero se creará de manera automática al ejecutar el pipeline) de nuestro ADLS, aque se almacenará en la ruta **raw/ecdc**. Siendo **raw** el contenedor y **ecdc** el directorio
-
-##### 4.6 Creación de un Pipeline parametrizado 
-
-1. Crear el Pipeline de ingesta de datos parametrizado **pl_ingest_ecdc_data** desde HTTP hacia Azure Data Lake Storage Gen2, el cual contendrá una actividad **Copy data**
-
-##### 4.7 Modificaciones 
-
-1. Parametrizar el Linked Service de origen **ls_http_opendata_ecdc_europa_eu**
-2. Crear un nuevo parámetro en el dataset de origen **ds_ecdc_raw_csv_http**
-3. Crear un nuevo parámetro en el pipeline **pl_ingest_ecdc_data**
-
-##### 4.8 Modificación final al proceso de ingesta desde HTTP donde configuramos el pipeline para ingestar multiples archivos con solo una ejecución 
-
-1. Creación del Dataset de origen `ds_ecdc_file_list` que hace referencia al archivo `ecdc_file_list.json` alojado en el contenedor `configs` en Azure Blob Storage
-
-2. Actualizar el Pipeline de ingesta de datos parametrizado `pl_ingest_ecdc_data` el cual contendrá las actividades `Lookup`, `For Each` y `Copy data`
 
 ### **Paso 5: Data Transformation**
 
-1. Pasos en la transformación de datos del archivo **cases_deaths.csv**
-2. Pasos en la transformación de datos del archivo **hospital-admissions.csv**
+##### 5.1 Transformación de datos
 
-##### 5.1 Creamos el Data flow "df_transform_cases_deaths" para transformar los datos del archivo "cases_deaths.csv"**
-
-1. Crear un nuevo dataset de origen que haga referencia al archivo `cases_deaths.csv`, llamado  `ds_raw_cases_and_deaths`
-
-2. Crear un nuevo dataset de origen que haga referencia al archivo `country_lookup.csv`, llamado  `ds_country_lookup`
-
-3. Crear un nuevo dataset de origen que haga referencia a la ruta `processed/ecdc/cases_deaths`, llamado  `ds_processed_cases_and_deaths`
-
-4. Crear un nuevo Data Flow llamado `df_transform_cases_deaths`
-
-5. Crear el Pipeline de ingesta de datos `pl_process_cases_and_deaths_data` para ejecutar el Data flow recien creado
-
-##### 5.2 Creamos el Data flow "df_transform_hospital_admissions" para transformar los datos del archivo "hospital-admissions.csv"
-
-1. Crear un nuevo dataset de origen que haga referencia al archivo `hospital-admissions.csv`, llamado  `ds_raw_hospital_admission`
-
-2. Crear un nuevo dataset de origen que haga referencia al archivo `dim_date.csv`, llamado  `ds_dim_date_lookup`
-
-3. Crear un nuevo dataset de destino que haga referencia a la ruta `processed/ecdc/hospital_admissions_weekly`, llamado  `ds_processed_hospital_admissions_weekly`
-
-4. Crear un nuevo dataset de destino que haga referencia a la ruta `processed/ecdc/hospital_admissions_daily`, llamado  `ds_processed_hospital_admissions_daily`
-
-5. Crear un nuevo Data Flow llamado `df_transform_hospital_admissions`
-
-6. Crear el Pipeline de ingesta de datos `pl_process_hospital_admissions_data` para ejecutar el Data flow recien creado
-
-### **Paso 6: Data Loading**
-
-1. Creación de un Linked Services con referencia hacia Azure SQL Database
-
-2. Creación de Datasets de destino para cargar archivos obtenidos en la transformación de datos
-
-3. Creación de Pipelines para cargar tablas de destino
-
-### **Paso 7: Orquestación**
-
-1. Orquestar todos los pipelines
+1. Transformación de datos utilizando `PySpark` y `Spark Pool`
