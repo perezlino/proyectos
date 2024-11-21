@@ -1,6 +1,6 @@
 # Proyecto de Orquestación de Ingesta, Transformación y Carga de Datos con Azure Data Factory
 
-[![p1098.png](https://i.postimg.cc/sfJm04kk/p1098.png)](https://postimg.cc/Wth0dgb8)
+[![p1258.png](https://i.postimg.cc/d1gJsHK5/p1258.png)](https://postimg.cc/ZBPGjLnN)
 
 Este proyecto tiene como objetivo crear un flujo completo de **orquestación de datos** utilizando **Azure Data Factory (ADF)**, con actividades que abarcan desde la ingestión de datos hasta su transformación y carga en una base de datos, todo automatizado y coordinado mediante pipelines.
 
