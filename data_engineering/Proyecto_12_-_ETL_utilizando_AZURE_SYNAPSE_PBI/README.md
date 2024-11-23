@@ -1,6 +1,30 @@
-# Proyecto en desarrollo
+# Implementación Completa de Proyecto de Análisis de Datos con Azure Synapse, Azure Data Lake y Power BI
 
 [![p1257.png](https://i.postimg.cc/prVpjcSR/p1257.png)](https://postimg.cc/YGVrKRks)
+
+Este proyecto tiene como objetivo un proceso de análisis de datos completo, desde la ingestión hasta la visualización en dashboards interactivos, utilizando tecnologías avanzadas en la nube de Azure, como **Azure Data Lake Storage (ADLS)**, **Azure Synapse Analytics**, y **Power BI** para manejar grandes volúmenes de datos de manera eficiente.
+
+## **Pasos principales del proyecto**
+
+1. **Creación de la cuenta de almacenamiento y contenedores**: Configura una cuenta de almacenamiento Azure Data Lake Storage Gen2 llamada `adlsproyectos` y crea los contenedores `proyectosasa`, `raw`, `refined` y `processed` para organizar los datos.
+
+2. **Configuración de Azure Synapse Analytics**: Provisiona un workspace de Azure Synapse Analytics e integra el almacenamiento `adlsproyectos` para realizar análisis de datos a gran escala.
+
+3. **Ingesta de datos**: Carga los datos en bruto en el contenedor `raw` de Azure Data Lake Storage desde una fuente externa.
+
+4. **Exploración y creación de External Tables**: Explora los datos iniciales y crea tablas externas en Synapse para facilitar el acceso y análisis de los datos.
+
+5. **Transformación de datos**: Transforma los datos usando PySpark en Azure Synapse para realizar optimizaciones y adaptaciones necesarias para el análisis.
+
+6. **Visualización de datos**: Visualiza los resultados en Power BI mediante tablas optimizadas en Dedicated SQL Pool en Azure Synapse.
+
+## **Tecnologías Utilizadas**
+
+- **Azure Data Lake Storage Gen2 (ADLS Gen2)**: Almacenamiento escalable y optimizado para grandes volúmenes de datos, utilizado para almacenar los datos en sus distintas etapas (`raw`, `refined`, `processed`).
+- **Azure Synapse Analytics**: Plataforma de análisis integrada para la ingesta, procesamiento y visualización de datos a gran escala, que incluye **SQL Pools**, **Spark Pools** y **Pipelines**.
+- **PySpark**: Framework de procesamiento distribuido de datos basado en Apache Spark, utilizado para transformar y procesar datos en el entorno de Azure Synapse.
+- **SQL Server**: Utilizado a través de **Dedicated SQL Pool** para almacenar datos procesados y optimizados.
+- **Power BI**: Herramienta de visualización de datos para la creación de dashboards interactivos y reportes a partir de los datos cargados en Azure Synapse.
 
 
 ## Despliegue del Proyecto
@@ -117,3 +141,9 @@ Pasemos a la siguiente sección, **Networking**. No vamos a crear ninguna red ad
 ##### 5.1 Transformación de datos
 
 1. Transformación de datos utilizando `PySpark` y `Spark Pool`
+
+
+### **Paso 6: Preparación y visualización de datos**
+
+1. Creación y carga de datos en `Dedicated SQL Pool`
+2. Creación de reporte en `Power BI` conectado a Dedicated SQL Pool de y publicarlo en `Power BI Service`
