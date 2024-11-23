@@ -146,4 +146,4 @@ Pasemos a la siguiente sección, **Networking**. No vamos a crear ninguna red ad
 ### **Paso 6: Preparación y visualización de datos**
 
 1. Creación y carga de datos en `Dedicated SQL Pool`
-2. Creación de reporte en `Power BI` conectado a Dedicated SQL Pool de y publicarlo en `Power BI Service`
+2. Creación de reporte en `Power BI` importando datos desde `Dedicated SQL Pool`, publicarlo en `Power BI Service` y luego acceder al reporte desde `Azure Synapse Analytics`
